@@ -543,37 +543,13 @@ body {
 .motherboard .core-wrapper{
   flex-direction: row-reverse;
 }
-/* RAM specific tuning */
-.ram .component-name {
-  font-size: clamp(3rem, 4.5vw, 5.2rem);
-}
 
-.ram .component-desc {
-  max-width: 420px;
-}
 
-.ram-visual {
-  position: relative;
-}
 
-.ram-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(245,110,15,0.15),
-    transparent
-  );
-  opacity: 0.6;
-  pointer-events: none;
-}
 
-.ram-stats {
-  grid-template-columns: repeat(2, 1fr);
-}
 
-.ram .stat-card {
-  background: var(--bg-secondary);
-  border-left: 1px solid var(--accent-primary);
-}
+
+
+
+
+
