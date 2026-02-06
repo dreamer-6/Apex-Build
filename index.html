@@ -3,204 +3,259 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apex Build</title>
+    <title>APEX — Zero Compromise Build</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Azeret+Mono:wght@300;400;600&family=Saira+Condensed:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rajdhani:wght@300;400;500;600;700;900&family=Azeret+Mono:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
-      <div class="nav-logo">Apex</div>
+      <div class="nav-logo">APEX</div>
       <ul class="nav-links">
-        <li><a href="#">spec</a></li>
-        <li><a href="#">componets</a></li>
-        <li><a href="#">performance</a></li>
-        <li><a href="#">about</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#components">Components</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
-      <a href="#" class="nav-cta">contact</a>
+      <a href="#contact" class="nav-cta">Contact</a>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero">
+      <!-- Background Text -->
       <div class="bg-text">
-        <div class="repeat first">for those who dare</div>
-        <div class="repeat second">dare for those who</div>
-        <div class="repeat third">for those who dare</div>
-        <div class="repeat fourth">dare for those who</div>
-        <div class="repeat fifth">for those who dare</div>
-        <div class="repeat sixth">dare for those who</div>
-        <div class="repeat seventh">for those who dare</div>
+        <div class="repeat first">FOR THOSE WHO DARE</div>
+        <div class="repeat second">DARE FOR THOSE WHO</div>
+        <div class="repeat third">FOR THOSE WHO DARE</div>
       </div>
+
+      <!-- Grid Overlay -->
+      <div class="grid-overlay"></div>
+
+      <!-- Hero Content -->
       <div class="hero-wrapper">
         <div class="hero-content">
           <p class="hero-label">
             <span class="bar"></span>
             // APEX SERIES
           </p>
-
           <h1 class="hero-title">
-            BUILD<br />
-            WITHOUT<br />
-            <span class="highlight">LIMITS</span>
+            BUILD<br />WITHOUT<br /><span class="highlight">LIMITS</span>
           </h1>
-
           <p class="hero-subtext">
-            PERFECTLY ENGINEERED
-            <span class="divider">|</span>
-            ABSOLUTE CONTROL
+            PERFECTLY ENGINEERED <span class="divider">|</span> ABSOLUTE CONTROL
           </p>
-
           <div class="cta-sec">
             <button class="cta primary">Explore Build</button>
             <button class="cta secondary">Tech Specs</button>
           </div>
         </div>
-
         <div class="hero-visual">
-          <img src="Resource/lava.png" alt="APEX high-performance PC build" />
+          <div class="hero-glow"></div>
+          <img src="Resource/lava.png" alt="APEX Build" />
         </div>
       </div>
+
+      <!-- Scroll Indicator -->
       <div class="scroll-indicator">
         <span>SCROLL</span>
         <div class="scroll-line"></div>
       </div>
     </section>
 
-    <!-- Processor section -->
-
+    <!-- CORE ARCHITECTURE -->
     <section class="core-architecture">
       <header class="section-header">
         <h2>Core Architecture</h2>
         <p>Designed as one unified system</p>
       </header>
 
+      <!-- CPU -->
       <section class="core processor">
         <div class="core-wrapper">
           <div class="component-visual">
-            <img src="Resource/pc.png" alt="" class="component-image">
+            <img src="Resource/pc.png" alt="CPU" class="component-image" />
           </div>
-
           <div class="component-detail">
-            <p class="label">// processor</p>
+            <p class="label">// PROCESSOR</p>
             <h2 class="component-name">
-              amd ryzen 9 <br />
-              9950<span class="highlight">x3d</span>
+              AMD<br>RYZEN 9<br />9950<span class="highlight">X3D</span>
             </h2>
             <p class="component-desc">
               16-Core Zen 5 with 3D V-Cache. 5.7GHz boost. 144MB total cache.
-              Maximum gaming performance.
             </p>
             <div class="stat-grid">
               <div class="stat-card">
                 <p class="stat-label">Architecture</p>
                 <h4 class="stat-unit">Zen 5</h4>
               </div>
-
               <div class="stat-card">
                 <p class="stat-label">Cores / Threads</p>
-                <h4 class="stat-unit">16 / 32</h4>
+                <h4 class="stat-unit">16C / 32T</h4>
               </div>
-
               <div class="stat-card">
                 <p class="stat-label">Boost Clock</p>
-                <h4 class="stat-unit">Up to 5.7 GHz</h4>
+                <h4 class="stat-unit">5.7 GHz</h4>
               </div>
-
               <div class="stat-card">
-                <p class="stat-label">cache</p>
-                <h4 class="stat-unit">114MB</h4>
+                <p class="stat-label">Cache</p>
+                <h4 class="stat-unit">144MB</h4>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- MOTHERBOARD -->
       <section class="core motherboard">
         <div class="core-wrapper">
           <div class="component-visual">
-            <img src="Resource/pc.png" alt="" class="component-image">
+            <img
+              src="Resource/pc.png"
+              alt="Motherboard"
+              class="component-image"
+            />
           </div>
-
           <div class="component-detail">
-            <p class="label">// motherboard</p>
+            <p class="label">// MOTHERBOARD</p>
             <h2 class="component-name">
-              ASUS ROG X870E <br />
-              <span class="highlight">EXTREME</span>
+              ASUS ROG X870E<br /><span class="highlight">EXTREME</span>
             </h2>
             <p class="component-desc">
-              A flagship E-ATX platform designed to deliver uninterrupted power and bandwidth.
+              Flagship E-ATX platform. Uninterrupted power and bandwidth.
             </p>
             <div class="stat-grid">
               <div class="stat-card">
                 <p class="stat-label">Form Factor</p>
                 <h4 class="stat-unit">E-ATX</h4>
               </div>
-
               <div class="stat-card">
                 <p class="stat-label">Socket</p>
                 <h4 class="stat-unit">AM5</h4>
               </div>
-
               <div class="stat-card">
                 <p class="stat-label">Chipset</p>
                 <h4 class="stat-unit">X870E</h4>
               </div>
-
               <div class="stat-card">
-                <p class="stat-label">PCI</p>
+                <p class="stat-label">PCIe</p>
                 <h4 class="stat-unit">5.0</h4>
               </div>
             </div>
           </div>
         </div>
       </section>
+    </section>
 
-      <section class="core ram">
-        <div class="core-wrapper">
-          <div class="component-visual">
-            <img src="Resource/pc.png" alt="" class="component-image">
+    <!-- GPU PEAK SECTION -->
+    <section class="peak-moment-wrap">
+  <div class="peak-label">GPU</div>
+
+  <div class="peak-visual-stack">
+    <h2 class="peak-bg-text">UNLEASH TRUE POWER</h2>
+    
+
+    <div class="peak-gpu-container">
+        <img src="Resource/rtx5090.png" alt="RTX 5090" class="peak-gpu-img">
+        <div class="peak-glow"></div>
+    </div>
+  </div>
+
+  <div class="peak-footer-content">
+    <div class="peak-card-name">NVIDIA GEFORCE RTX 5090</div>
+    <div class="peak-card-details">24GB GDDR7 · BLACKWELL ARCHITECTURE · PCIE 5.0</div>
+
+    <div class="peak-stats-grid">
+      <div class="peak-stat-card">
+        <span class="p-stat-tag">BANDWIDTH</span>
+        <div class="p-stat-val">1.8 TB/s</div>
+      </div>
+      <div class="peak-stat-card">
+        <span class="p-stat-tag">RAY TRACING</span>
+        <div class="p-stat-val">GEN 4</div>
+      </div>
+      <div class="peak-stat-card">
+        <span class="p-stat-tag">AI CORES</span>
+        <div class="p-stat-val">TENSOR 5</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- QUAD GRID -->
+    <section class="quad-grid">
+      <div class="quad-wrapper">
+        <div class="sub-component ram">
+          <div class="sub-component-visual">
+            <img src="Resource/lava.png" alt="RAM" />
           </div>
-
-          <div class="component-detail">
-            <p class="label">// memory</p>
-            <h2 class="component-name">
-              96gb ddr5 <br />
-              <span class="highlight">EXPO</span>(2x48)
-            </h2>
-            <p class="component-desc">
-              High-density dual-channel configuration optimized for stability and latency, avoiding the drawbacks of quad-DIMM setups
+          <div class="sub-component-content">
+            <p class="label">// MEMORY</p>
+            <h3 class="component-title">96GB DDR5</h3>
+            <p class="component-details">
+              2&times;48GB EXPO. 6400MHz low-latency.
             </p>
-            <div class="stat-grid">
-              <div class="stat-card">
-                <p class="stat-label">Capacity</p>
-                <h4 class="stat-unit">96GB</h4>
-              </div>
-
-              <div class="stat-card">
-                <p class="stat-label">Speed</p>
-                <h4 class="stat-unit">7200 MHz</h4>
-              </div>
-
-              <div class="stat-card">
-                <p class="stat-label">latency</p>
-                <h4 class="stat-unit">CL34</h4>
-              </div>
-
-              <div class="stat-card">
-                <p class="stat-label">Technology</p>
-                <h4 class="stat-unit">DDR5</h4>
-              </div>
+            <div class="component-stat">
+              <span class="stat-info">2&times;48GB</span>
+              <span class="stat-info">6400MHz</span>
+              <span class="stat-info">EXPO</span>
             </div>
           </div>
         </div>
-      </section>
+
+        <div class="sub-component storage">
+          <div class="sub-component-visual">
+            <div class="placeholder">SSD</div>
+          </div>
+          <div class="sub-component-content">
+            <p class="label">// STORAGE</p>
+            <h3 class="component-title">8TB GEN5</h3>
+            <p class="component-details">Crucial T705. 14,500 MB/s read.</p>
+            <div class="component-stat">
+              <span class="stat-info">8TB</span>
+              <span class="stat-info">PCIE 5.0</span>
+              <span class="stat-info">14,500 MB/S</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-component cooling">
+          <div class="sub-component-visual">
+            <div class="placeholder">AIO</div>
+          </div>
+          <div class="sub-component-content">
+            <p class="label">// AIO COOLING</p>
+            <h3 class="component-title">420MM</h3>
+            <p class="component-details">Corsair H170i LCD. 10 fans. 28dB.</p>
+            <div class="component-stat">
+              <span class="stat-info">420MM</span>
+              <span class="stat-info">10 FANS</span>
+              <span class="stat-info">28 DB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-component power">
+          <div class="sub-component-visual">
+            <div class="placeholder">PSU</div>
+          </div>
+          <div class="sub-component-content">
+            <p class="label">// POWER</p>
+            <h3 class="component-title">1600W</h3>
+            <p class="component-details">Seasonic TX. 80+ Titanium.</p>
+            <div class="component-stat">
+              <span class="stat-info">1600W</span>
+              <span class="stat-info">TITANIUM</span>
+              <span class="stat-info">ATX 3.1</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
