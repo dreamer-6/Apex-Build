@@ -38,6 +38,7 @@ body {
   font-family: "Rajdhani", sans-serif;
   overflow-x: hidden;
   line-height: 1.6;
+  padding-top: 80px;
 }
 /*----------Navbar-----------*/
 
@@ -662,6 +663,24 @@ body {
     width: 50px;
     height: 90px;
 
+  }
+}
+@media (max-width: 800px) {
+  .component-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .component-desc {
+    max-width: 100%;
+  }
+   .motherboard .component-wrapper {
+    direction: ltr;
+   }
+}
+@media (max-width: 480px) {
+  .component {
+    padding: 100px 24px;
   }
 }
 /********GPU SECTION----------*/
