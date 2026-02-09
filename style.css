@@ -159,6 +159,14 @@ body {
     z-index: 50;
     display: none;
   }
+  .nav-link::before{
+    content: 'X';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: 700;
+  }
   .navbar {
     padding: 0 20px;
   }
@@ -418,15 +426,6 @@ body {
   }
 }
 @media (max-width: 800px) {
-  .hero-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 0;
-  }
-  .hero-label {
-    font-size: 11px;
-  }
   .hero-subtext {
     font-size: 12px;
     margin-bottom: 30px;
@@ -437,6 +436,25 @@ body {
   .cta {
     padding: 12px 28px;
     font-size: 10px;
+  }
+  .scroll-indicator{
+    bottom: -40px;
+  }
+}
+@media(max-width:480px){
+  .hero-wrapper{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .cta-sec{
+    width: 100%;
+    flex-direction: column;
+  }
+  .cta{
+    width: 100%;
+  }
+  .scroll-indicator{
+    bottom: -20px;
   }
 }
 
@@ -529,7 +547,7 @@ body {
 .component-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s ease;
 }
 .mbd-screen {
@@ -569,7 +587,7 @@ body {
 }
 
 .component-visual:hover .component-image {
-  transform: rotateY(-6deg) scale(1.04);
+  transform: rotateY(-6deg);
 }
 
 .component-visual:hover .mbd-screen {
@@ -633,34 +651,52 @@ body {
   background: rgba(245, 110, 15, 0.3);
 }
 .cpu .component-image {
-  transform: scale(0.8);
+  transform: scale(1);
 }
 .motherboard .component-wrapper {
   direction: rtl;
 }
+.motherboard .component-image{object-fit: cover;}
 .motherboard .component-details {
   direction: ltr;
 }
 @media (max-width: 800px) {
   .component-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.2fr 1fr;
   }
+  .mbd-screen{
+    left: 80px;
+  }
+
 }
 @media (max-width: 480px) {
+  .component-wrapper{
+    grid-template-columns: 1fr;
+  }
   .component-visual {
     height: 300px;
   }
-  .component-visual:hover .component-image {
+  .component-visual:hover .motherboard.component-image {
     transform: scale(1);
   }
   .mbd-screen {
     position: absolute;
 
-    top: 40px;
-    left: 52px;
+    top: 42px;
+    left: 70px;
     width: 50px;
     height: 90px;
 
+  }
+}
+@media (max-width:390px){
+  .mbd-screen{
+    left: 72px;
+  }
+}
+@media (max-width:360px){
+  .mbd-screen{
+    left: 52px;
   }
 }
 /********GPU SECTION----------*/
@@ -733,11 +769,11 @@ body {
 .gpu-visual {
   position: relative;
   z-index: 2;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 .gpu-image {
   max-width: 600px;
-  width: 90%;
+  width: 100%;
   height: auto;
   filter: drop-shadow(0 0 100px rgba(245, 110, 15, 0.4));
   animation: gpuFloat 5s ease-in-out infinite;
@@ -834,14 +870,19 @@ body {
 .gpu-content > * {
   animation: fadeSlideUp 1s ease-in-out 0.5s forwards;
 }
-@media (max-width:400px){
+@media (max-width:480px){
   .gpu-content{
-    width: 100%;
-    text-align: center;
+    gap: 20px;
   }
   .gpu-stat{
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .gpu-title,
+  .gpu-sub{
+    text-align: center;
+  }
+  
 }
 /*-------QUAD GRID SECTION----------*/
 
@@ -949,7 +990,7 @@ body {
   letter-spacing: 1px;
   border: 1px solid rgba(245, 110, 15, 0.15);
 }
-@media(max-width:400px){
+@media(max-width:480px){
   .quad-grid{
     grid-template-columns: 1fr;
   }
@@ -1176,9 +1217,13 @@ body {
   font-size: 13px;
 }
 
-@media(max-width:400px){
+@media(max-width:480px){
   .cabinet-container{
     grid-template-columns: 1fr;
+  }
+  .cabinet-frame{
+    width: 100%;
+    height: 80%;
   }
 }
 /*---------- Final Spec Table Section ----------*/
@@ -1364,7 +1409,7 @@ body {
 }
 .order-title {
   font-family: var(--font-title);
-  font-size: 4rem;
+  font-size: clamp(3rem,4vw,4rem);
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 25px;
@@ -1400,8 +1445,14 @@ body {
 .order-btn:active {
   transform: scale(1.1);
 }
-@media(max-width:400px){
+@media(max-width:480px){
   .order-wrapper{
     text-align: center;
+  }
+  .order-sub{
+    font-size: 14px;
+  }
+  .order-btn{
+    font-size:16px;
   }
 }
