@@ -11,18 +11,28 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rajdhani:wght@300;400;500;600;700;900&family=Azeret+Mono:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <nav class="navbar">
-      <div class="nav-logo">APEX</div>
-      <ul class="nav-link">
-        <li><a href="#spec">architecture</a></li>
-        <li><a href="#components">components</a></li>
-        <li><a href="#performance">performance</a></li>
-        <li><a href="#specs-full">about</a></li>
-      </ul>
-      <a href="#" class="nav-cta">order build</a>
-    </nav>
+  <div class="nav-logo">APEX</div>
+  
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-link" id="navMenu">
+    <div class="close-btn" id="closeBtn"><i class="fas fa-times"></i></div>
+    <li><a href="#spec">architecture</a></li>
+    <li><a href="#components">components</a></li>
+    <li><a href="#performance">performance</a></li>
+    <li><a href="#specs-full">about</a></li>
+  </ul>
+  
+  <a href="#" class="nav-cta">order build</a>
+</nav>
 
     <section class="hero">
       <div class="grid-overlay"></div>
@@ -180,7 +190,7 @@
       <div class="quad-grid">
         <div class="quad-card">
           <div class="quad-visual">
-            <div class="quad-placeholder">RAM</div>
+            <img src="Resource/ram.png" alt="" class="quad-image">
           </div>
           <div class="quad-content">
             <p class="label">Memory</p>
@@ -198,7 +208,7 @@
 
         <div class="quad-card">
           <div class="quad-visual">
-            <div class="quad-placeholder">SSD</div>
+            <img src="Resource/evo.jpg" alt="" class="quad-image">
           </div>
           <div class="quad-content">
             <p class="label">Storage</p>
@@ -216,7 +226,7 @@
 
         <div class="quad-card">
           <div class="quad-visual">
-            <div class="quad-placeholder">COOLING</div>
+             <img src="Resource/cooling.jpg" alt="" class="quad-image">
           </div>
           <div class="quad-content">
             <p class="label">Cooling</p>
@@ -234,7 +244,7 @@
 
         <div class="quad-card">
           <div class="quad-visual">
-            <div class="quad-placeholder">PSU</div>
+           <img src="Resource/thor.jpg" alt="" class="quad-image">
           </div>
           <div class="quad-content">
             <p class="label">Power</p>
@@ -583,6 +593,25 @@
     </section>
 
     <script>
+      // Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+const closeBtn = document.getElementById('closeBtn');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  navMenu.classList.remove('active');
+});
+
+// Close menu when clicking on links
+document.querySelectorAll('.nav-link a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+});
       function toggleCategory(header) {
         const category = header.parentElement;
         const isActive = category.classList.contains("active");

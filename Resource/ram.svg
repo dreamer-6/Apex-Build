@@ -1,0 +1,25 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neono" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f56e0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8126;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#080808"/>
+  <g filter="url(#glow)">
+    <!-- RAM Stick Body -->
+    <path d="M50,150 L350,150 L350,250 L50,250 Z" fill="none" stroke="#333" stroke-width="2"/>
+    <!-- RGB Strip -->
+    <path d="M60,160 L340,160 L340,190 L60,190 Z" fill="url(#neono)" opacity="0.8"/>
+    <!-- Contact Pins -->
+    <path d="M60,250 L60,260 M70,250 L70,260 M80,250 L80,260 M90,250 L90,260 M310,250 L310,260 M320,250 L320,260" stroke="#555" stroke-width="2"/>
+  </g>
+  <text x="200" y="320" font-family="sans-serif" font-size="20" fill="#444" text-anchor="middle" letter-spacing="4">DDR5 MODULE</text>
+</svg>
