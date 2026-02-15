@@ -3,625 +3,212 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>APEX — Zero Compromise Build</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>APEX — Beyond Compromise</title>
+    <link rel="stylesheet" href="index.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rajdhani:wght@300;400;500;600;700;900&family=Azeret+Mono:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rajdhani:wght@400;500;600;700&family=Azeret+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
-    <nav class="navbar">
-  <div class="nav-logo">APEX</div>
-  
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+    <nav class="nav-bar">
+      <div class="nav-content">
+        <div class="nav-logo">APEX</div>
 
-  <ul class="nav-link" id="navMenu">
-    <div class="close-btn" id="closeBtn"><i class="fas fa-times"></i></div>
-    <li><a href="#spec">architecture</a></li>
-    <li><a href="#components">components</a></li>
-    <li><a href="#performance">performance</a></li>
-    <li><a href="#specs-full">about</a></li>
-  </ul>
-  
-  <a href="#" class="nav-cta">order build</a>
-</nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
 
-    <section class="hero">
+        <ul class="nav-links">
+          <li>
+            <a href="#special-edition" class="nav-link">special edition</a>
+          </li>
+          <li><a href="#categories" class="nav-link">categories</a></li>
+          <li><a href="#performance" class="nav-link">performance</a></li>
+          <li><a href="#about" class="nav-link">about</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-cta">Get Started</a>
+      </div>
+    </nav>
+
+    <section class="hero-premium" id="hero">
+      <div class="mega-text-bg">APEX</div>
+
+      <div class="ambient-light"></div>
       <div class="grid-overlay"></div>
+
+      <div class="particles-container">
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+      </div>
+
       <div class="hero-wrapper">
         <div class="hero-content">
-          <p class="hero-label"><span class="bar"></span>APEX SERIES</p>
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span class="badge-text">2026 FLAGSHIP SERIES</span>
+          </div>
+
           <h1 class="hero-title">
             BEYOND <br />
-            ALL <br />
-            <span class="highlight">LIMITS</span>
+            <span class="text-glow">COMPROMISE</span>
           </h1>
-          <p class="hero-subtext">
-            engineered perfection
-            <span class="divider">|</span>
-            unrivaled power
-          </p>
-          <div class="cta-sec">
-            <button class="cta primary">configure build</button>
-            <button class="cta secondary">view specs</button>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-glow"></div>
-          <img src="Resource/lava.png" alt="APEX Build Visual" />
-        </div>
-        <div class="scroll-indicator">
-          <p>scroll</p>
-          <div class="scroll-line"></div>
-        </div>
-      </div>
-    </section>
 
-    <header class="architecture" id="spec">
-      <h2 class="section-title">core architecture</h2>
-      <p class="section-sub">the heart of the machine</p>
-    </header>
-
-    <section class="component cpu">
-      <div class="component-wrapper">
-        <div class="component-visual">
-          <img
-            src="Resource/cpu2.png"
-            alt="Ryzen 9 9950X3D"
-            class="component-image"
-          />
-        </div>
-        <div class="component-details">
-          <span class="label">// PROCESSOR</span>
-          <h1 class="component-name">
-            AMD RYZEN™ 9 <span class="highlight">9950X3D</span>
-          </h1>
-          <p class="component-desc">
-            16-Core Zen 5 architecture fused with 2nd Gen 3D V-Cache. Unrivaled
-            gaming dominance with massive L3 cache pools for extreme simulation
-            and frame rates.
-          </p>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <p class="stat-label">architecture</p>
-              <h4 class="stat-value">ZEN 5</h4>
-            </div>
-            <div class="stat-card">
-              <p class="stat-label">Cores / Threads</p>
-              <h4 class="stat-value">16C / 32T</h4>
-            </div>
-            <div class="stat-card">
-              <p class="stat-label">Max Boost</p>
-              <h4 class="stat-value">5.7 GHz</h4>
-            </div>
-            <div class="stat-card">
-              <p class="stat-label">Total Cache</p>
-              <h4 class="stat-value">145MB</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="component motherboard">
-      <div class="component-wrapper">
-        <div class="component-visual">
-          <img
-            src="Resource/motherboard.png"
-            alt="ROG X870E"
-            class="component-image"
-          />
-          <video
-            class="mbd-screen"
-            src="Resource/MBD-VIDEO.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-          ></video>
-        </div>
-        <div class="component-details">
-          <span class="label">// MOTHERBOARD</span>
-          <h1 class="component-name">
-            ROG X870E <span class="highlight">EXTREME</span>
-          </h1>
-          <p class="component-desc">
-            The ultimate AM5 flagship. Featuring a built-in 5-inch LCD
-            dashboard, Wi-Fi 7, and dual PCIe 5.0 slots for zero-compromise
-            expansion.
-          </p>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <p class="stat-label">Form Factor</p>
-              <h4 class="stat-value">E-ATX</h4>
-            </div>
-            <div class="stat-card">
-              <p class="stat-label">Connectivity</p>
-              <h4 class="stat-value">USB4 / 10G</h4>
-            </div>
-            <div class="stat-card">
-              <p class="stat-label">Wireless</p>
-              <h4 class="stat-value">WiFi 7</h4>
-            </div>
-            <div class="stat-card">
-              <p class="stat-label">LCD Display</p>
-              <h4 class="stat-value">5" OLED</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="gpu-sec" id="performance">
-      <div class="gpu-glow-bg"></div>
-      <div class="gpu-content">
-        <p class="gpu-label">GRAPHICS</p>
-        <div class="gpu-visual">
-          <img src="Resource/rtx5090.png" class="gpu-image" />
-        </div>
-        <h2 class="gpu-title">ROG ASTRAL RTX™ 5090</h2>
-        <p class="gpu-sub">32GB GDDR7 · 512-BIT INTERFACE · AI OVERDRIVE</p>
-        <div class="gpu-stat">
-          <div class="gpu-stat-card">
-            <h3 class="gpu-stat-value">32GB</h3>
-            <p class="gpu-stat-label">GDDR7 VRAM</p>
-          </div>
-          <div class="gpu-stat-card">
-            <h3 class="gpu-stat-value">DLSS 4</h3>
-            <p class="gpu-stat-label">AI Upscaling</p>
-          </div>
-          <div class="gpu-stat-card">
-            <h3 class="gpu-stat-value">8K</h3>
-            <p class="gpu-stat-label">Ultra Ready</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="quad-section" id="components">
-      <div class="quad-grid">
-        <div class="quad-card">
-          <div class="quad-visual">
-            <img src="Resource/ram.png" alt="" class="quad-image">
-          </div>
-          <div class="quad-content">
-            <p class="label">Memory</p>
-            <h3 class="quad-title">KINGSTON FURY</h3>
-            <p class="quad-desc">
-              96GB (2x48GB) Renegade RGB DDR5-6400 CL32 for massive workloads.
-            </p>
-            <div class="quad-specs">
-              <span class="quad-spec">96GB</span>
-              <span class="quad-spec">6400 MT/s</span>
-              <span class="quad-spec">RGB</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="quad-card">
-          <div class="quad-visual">
-            <img src="Resource/evo.jpg" alt="" class="quad-image">
-          </div>
-          <div class="quad-content">
-            <p class="label">Storage</p>
-            <h3 class="quad-title">9100 PRO GEN5</h3>
-            <p class="quad-desc">
-              8TB NVMe M.2 SSD with dedicated heatsink for 14,500 MB/s speeds.
-            </p>
-            <div class="quad-specs">
-              <span class="quad-spec">8TB</span>
-              <span class="quad-spec">14.5 GB/s</span>
-              <span class="quad-spec">PCIe 5.0</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="quad-card">
-          <div class="quad-visual">
-             <img src="Resource/cooling.jpg" alt="" class="quad-image">
-          </div>
-          <div class="quad-content">
-            <p class="label">Cooling</p>
-            <h3 class="quad-title">RYUO IV 360</h3>
-            <p class="quad-desc">
-              ROG Ryuo IV SLC with 6.67" curved AMOLED and Wireless Uni-Fans.
-            </p>
-            <div class="quad-specs">
-              <span class="quad-spec">360mm</span>
-              <span class="quad-spec">AMOLED</span>
-              <span class="quad-spec">Wireless</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="quad-card">
-          <div class="quad-visual">
-           <img src="Resource/thor.jpg" alt="" class="quad-image">
-          </div>
-          <div class="quad-content">
-            <p class="label">Power</p>
-            <h3 class="quad-title">THOR 1600W</h3>
-            <p class="quad-desc">
-              Titanium III efficiency with magnetic OLED power monitoring.
-            </p>
-            <div class="quad-specs">
-              <span class="quad-spec">1600W</span>
-              <span class="quad-spec">Titanium</span>
-              <span class="quad-spec">ATX 3.1</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cabinet-showcase" id="cabinet">
-      <div class="cabinet-container">
-        <div class="cabinet-visual">
-          <div class="cabinet-frame">
-            <img src="Resource/lava.png" alt="Hyte Y70" class="cabinet-image" />
-            <div class="cabinet-glass-reflection"></div>
-            <div class="cabinet-features">
-              <div class="feature-point" style="top: 35%; right: 25%">
-                <div class="feature-tooltip">Panoramic Glass</div>
-              </div>
-              <div class="feature-point" style="bottom: 40%; left: 30%">
-                <div class="feature-tooltip">Vertical GPU Mount</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cabinet-info">
-          <p class="label">ENCLOSURE</p>
-          <h3>
-            HYTE<br />
-            <span class="highlight">Y70 SHOWCASE</span>
-          </h3>
-          <p class="cabinet-desc">
-            A panoramic masterpiece optimized for the RTX 5090. Featuring a
-            4-slot vertical GPU orientation and unmatched airflow for the ROG
-            X870E flagship.
+          <p class="hero-sub">
+            Hand-crafted, aggressively tuned, and aesthetically flawless custom
+            PCs. Engineered for those who refuse to settle for ordinary.
           </p>
 
-          <div class="cabinet-specs-list">
-            <div class="cabinet-spec-item">
-              <div class="spec-icon">📐</div>
-              <div class="spec-content">
-                <h4>Design</h4>
-                <p>Dual-Chamber Panoramic Showcase</p>
+          <div class="hero-specs-row">
+            <div class="spec-micro">
+              <span class="micro-label">ARCHITECTURE</span>
+              <span class="micro-value">ZEN 5 / BLACKWELL</span>
+            </div>
+            <div class="spec-micro">
+              <span class="micro-label">THERMALS</span>
+              <span class="micro-value">CUSTOM LOOP</span>
+            </div>
+            <div class="spec-micro">
+              <span class="micro-label">ACOUSTICS</span>
+              <span class="micro-value">0dB IDLE</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#builds" class="btn-primary-epic">
+              <span>EXPLORE BUILDS</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#configurator" class="btn-secondary-epic"
+              >CONFIGURE YOUR OWN</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-visual-stage">
+          <div class="pc-container">
+            <img
+              src="Resource/landing-assets/pc.png"
+              alt="APEX Ultimate Build"
+              class="hero-pc-image"
+            />
+
+            <div class="hud-element hud-1">
+              <div class="hud-dot"></div>
+              <div class="hud-line"></div>
+              <div class="hud-panel">
+                <p class="hud-title">PANORAMIC GLASS</p>
+                <p class="hud-desc">Seamless edge-to-edge view</p>
               </div>
             </div>
-            <div class="cabinet-spec-item">
-              <div class="spec-icon">💨</div>
-              <div class="spec-content">
-                <h4>Fans</h4>
-                <p>10x Wireless UNI-FAN SL-INF</p>
+
+            <div class="hud-element hud-2">
+              <div class="hud-dot"></div>
+              <div class="hud-line"></div>
+              <div class="hud-panel">
+                <p class="hud-title">ROG ASTRAL 5090</p>
+                <p class="hud-desc">Vertical mount orientation</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="scroll-indicator">
+        <p>SCROLL</p>
+        <div class="scroll-line-container">
+          <div class="scroll-line-fill"></div>
+        </div>
+      </div>
     </section>
 
-    <section class="spec-table-section" id="specs-full">
-      <div class="spec-table-container">
-        <div class="spec-table-header">
-          <h2>Complete <span class="highlight">Specifications</span></h2>
-          <p style="color: var(--text-muted)">Every detail of the APEX build</p>
+    <section class="philosophy-cinematic">
+      <div class="mega-text-bg">STANDARD</div>
+
+      <div class="ambient-light"></div>
+      <div class="grid-overlay"></div>
+
+      <div class="philo-container">
+        <div class="section-header">
+          <span class="section-label">
+            <span class="pulse-dot"></span> THE APEX STANDARD
+          </span>
+          <h2 class="section-title">
+            Engineered to <span class="text-glow">Dominate</span>
+          </h2>
         </div>
 
-        <div class="spec-table-wrapper">
-          <div class="spec-category active">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>🧠 Processor & Platform</h3>
-              <div class="category-toggle"></div>
+        <div class="philo-cards-row">
+          <div class="philo-mini-card">
+            <div class="mini-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path
+                  d="M360-360v-240h240v240H360Zm80-80h80v-80h-80v80Zm-80 320v-80h-80q-33 0-56.5-23.5T200-280v-80h-80v-80h80v-80h-80v-80h80v-80q0-33 23.5-56.5T280-760h80v-80h80v80h80v-80h80v80h80q33 0 56.5 23.5T760-680v80h80v80h-80v80h80v80h-80v80q0 33-23.5 56.5T680-200h-80v80h-80v-80h-80v80h-80Zm320-160v-400H280v400h400ZM480-480Z"
+                />
+              </svg>
             </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">CPU Model</span>
-                <span class="spec-value spec-highlight"
-                  >AMD Ryzen™ 9 9950X3D</span
-                >
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Architecture</span>
-                <span class="spec-value">Zen 5 + 3D V-Cache</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Cores / Threads</span>
-                <span class="spec-value">16 Cores / 32 Threads</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Max Boost Clock</span>
-                <span class="spec-value spec-highlight">5.7 GHz</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Total Cache</span>
-                <span class="spec-value">145MB (L2+L3)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Socket</span>
-                <span class="spec-value">AM5 (LGA 1718)</span>
-              </div>
+            <div class="mini-card-content">
+              <h4 class="mini-title">Perfect Engineering</h4>
+              <p class="mini-desc">
+                Millimeter-perfect cable routing and flawless component
+                integration.
+              </p>
             </div>
           </div>
 
-          <div class="spec-category">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>🧩 Motherboard</h3>
-              <div class="category-toggle"></div>
+          <div class="philo-mini-card">
+            <div class="mini-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path
+                  d="M480-316.5q38-.5 56-27.5l224-336-336 224q-27 18-28.5 55t22.5 61q24 24 62 23.5Zm0-483.5q59 0 113.5 16.5T696-734l-76 48q-33-17-68.5-25.5T480-720q-133 0-226.5 93.5T160-400q0 42 11.5 83t32.5 77h552q23-38 33.5-79t10.5-85q0-36-8.5-70T766-540l48-76q30 47 47.5 100T880-406q1 57-13 109t-41 99q-11 18-30 28t-40 10H204q-21 0-40-10t-30-28q-26-45-40-95.5T80-400q0-83 31.5-155.5t86-127Q252-737 325-768.5T480-800Zm7 313Z"
+                />
+              </svg>
             </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">Model</span>
-                <span class="spec-value spec-highlight"
-                  >ASUS ROG X870E EXTREME</span
-                >
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Form Factor</span>
-                <span class="spec-value">E-ATX (Extreme ATX)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Chipset</span>
-                <span class="spec-value">AMD X870E</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">PCIe Support</span>
-                <span class="spec-value">Dual PCIe 5.0 x16 Slots</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Integrated Display</span>
-                <span class="spec-value">5" Dashboard LCD</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Networking</span>
-                <span class="spec-value">10GbE + WiFi 7 + BT 5.4</span>
-              </div>
+            <div class="mini-card-content">
+              <h4 class="mini-title">Uncompromising Power</h4>
+              <p class="mini-desc">
+                Equipped exclusively with flagship-tier processors and graphics.
+              </p>
             </div>
           </div>
 
-          <div class="spec-category">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>🧠 Memory (RAM)</h3>
-              <div class="category-toggle"></div>
+          <div class="philo-mini-card">
+            <div class="mini-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path
+                  d="M367-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q560-607 560-640t-23.5-56.5Q513-720 480-720t-56.5 23.5Q400-673 400-640t23.5 56.5Q447-560 480-560t56.5-23.5ZM480-640Zm0 400Z"
+                />
+              </svg>
             </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">Brand/Model</span>
-                <span class="spec-value">Kingston FURY Renegade RGB</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Capacity</span>
-                <span class="spec-value spec-highlight">96GB (2×48GB)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Speed</span>
-                <span class="spec-value spec-highlight">6400 MT/s</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Latency</span>
-                <span class="spec-value">CL32 Ultra-Low Latency</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Profile</span>
-                <span class="spec-value">AMD EXPO™ Optimized</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="spec-category">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>🎮 Graphics Card</h3>
-              <div class="category-toggle"></div>
-            </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">GPU Model</span>
-                <span class="spec-value spec-highlight"
-                  >ASUS ROG Astral RTX™ 5090</span
-                >
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">VRAM Capacity</span>
-                <span class="spec-value spec-highlight">32GB GDDR7</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Memory Bus</span>
-                <span class="spec-value">512-bit</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Interface</span>
-                <span class="spec-value">PCIe 5.0 x16</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Architecture</span>
-                <span class="spec-value">Blackwell (Next-Gen)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Features</span>
-                <span class="spec-value">DLSS 4 / Ray Reconstruction</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="spec-category">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>💾 Storage</h3>
-              <div class="category-toggle"></div>
-            </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">Drive Model</span>
-                <span class="spec-value">9100 PRO NVMe PCIe 5.0</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Capacity</span>
-                <span class="spec-value spec-highlight"
-                  >8TB Extreme Density</span
-                >
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Read Speed</span>
-                <span class="spec-value spec-highlight">14,500 MB/s</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Write Speed</span>
-                <span class="spec-value">12,700 MB/s</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Cooling</span>
-                <span class="spec-value">Integrated Passive Heatsink</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="spec-category">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>❄️ Cooling & Thermal</h3>
-              <div class="category-toggle"></div>
-            </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">AIO Cooler</span>
-                <span class="spec-value spec-highlight"
-                  >ROG Ryuo IV SLC 360</span
-                >
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Radiator Size</span>
-                <span class="spec-value">360mm High-Density Aluminum</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Pump Display</span>
-                <span class="spec-value">6.67" Curved AMOLED</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Case Fans</span>
-                <span class="spec-value">Lian Li UNI FAN Wireless</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Fan Count</span>
-                <span class="spec-value">10x 120mm Fans Total</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="spec-category">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>⚡ Power Supply (PSU)</h3>
-              <div class="category-toggle"></div>
-            </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">Model</span>
-                <span class="spec-value spec-highlight"
-                  >ROG THOR 1600W Titanium III</span
-                >
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Wattage</span>
-                <span class="spec-value">1600 Watts</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Efficiency</span>
-                <span class="spec-value">80+ Titanium Certified</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Standards</span>
-                <span class="spec-value">ATX 3.1 / PCIe 5.1 Ready</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Display</span>
-                <span class="spec-value">Side-Mounted Magnetic OLED</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="spec-category">
-            <div class="category-header" onclick="toggleCategory(this)">
-              <h3>🏗️ Chassis</h3>
-              <div class="category-toggle"></div>
-            </div>
-            <div class="category-content">
-              <div class="spec-row">
-                <span class="spec-label">Model</span>
-                <span class="spec-value spec-highlight">Hyte Y70</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Type</span>
-                <span class="spec-value">Panoramic Dual-Chamber</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">Glass</span>
-                <span class="spec-value">4mm Tempered Panoramic</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">GPU Mount</span>
-                <span class="spec-value">Vertical-Only (4-Slot Ready)</span>
-              </div>
-              <div class="spec-row">
-                <span class="spec-label">I/O</span>
-                <span class="spec-value">USB-C 3.2 Gen 2 / USB 3.0</span>
-              </div>
+            <div class="mini-card-content">
+              <h4 class="mini-title">Crafted for You</h4>
+              <p class="mini-desc">
+                Fully customizable aesthetics and bespoke tuning tailored
+                directly to you.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="order-sec">
-      <div class="order-wrapper">
-        <h1 class="order-title">
-          ready to <span class="highlight">order</span>?
-        </h1>
-        <p class="order-sub">
-          The APEX configuration is hand-built, stress-tested for 48 hours, and
-          ships in a premium wooden crate.
-        </p>
-        <p class="price">$8,999</p>
-        <a href="#" class="order-btn">Initiate Build</a>
-      </div>
-    </section>
-
-    <script>
-      // Hamburger Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('navMenu');
-const closeBtn = document.getElementById('closeBtn');
-
-hamburger.addEventListener('click', () => {
-  navMenu.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  navMenu.classList.remove('active');
-});
-
-// Close menu when clicking on links
-document.querySelectorAll('.nav-link a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-  });
-});
-      function toggleCategory(header) {
-        const category = header.parentElement;
-        const isActive = category.classList.contains("active");
-        document.querySelectorAll(".spec-category").forEach((cat) => {
-          cat.classList.remove("active");
-        });
-        if (!isActive) {
-          category.classList.add("active");
-        }
-      }
-    </script>
   </body>
 </html>
