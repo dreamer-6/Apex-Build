@@ -22,7 +22,7 @@
 
   --font-title: "Archivo Black", sans-serif;
   --font-body: "Rajdhani", sans-serif;
-  --font-mono: "Azeret Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
   --space-grotest: "Space Grotesk", sans-serif;
   --syncopate: "Syncopate", sans-serif;
   --inter: "Inter", sans-serif;
@@ -33,6 +33,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* =========================================
+   CUSTOM SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-hover); }
+* { scrollbar-width: thin; scrollbar-color: var(--accent-primary) var(--bg-deep); }
 
 html {
   scroll-behavior: smooth;
@@ -211,6 +220,25 @@ body {
   transform: translateY(-2px);
 }
 
+/* Nav scrolled state — toggled by JS */
+.global-nav.scrolled {
+  background: rgba(10, 10, 12, 0.97);
+  border-bottom-color: rgba(245, 110, 15, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+}
+.global-nav.scrolled .nav-wrapper {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Active nav link — toggled by scroll spy */
+.nav-link.active {
+  color: var(--accent-primary);
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
 /* =========================================
    HERO 
    ========================================= */
@@ -227,23 +255,6 @@ body {
   text-align: center;
   overflow: hidden;
   background: var(--bg-deep);
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 900px;
-  height: 900px;
-  background: radial-gradient(
-    circle,
-    rgba(245, 110, 15, 0.35) 0%,
-    rgba(245, 110, 15, 0.15) 40%,
-    transparent 70%
-  );
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(120px);
-  z-index: 0;
 }
 .hero::before {
   content: "";
@@ -355,7 +366,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
-  padding: 8px 24px;
+  padding: 16px 32px;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
@@ -402,6 +413,9 @@ body {
   .hero-tag {
     font-size: 9px;
     letter-spacing: 2px;
+  }
+  .hero-title {
+    letter-spacing: -0.5px;
   }
   .hero-cta {
     flex-direction: column;
@@ -506,7 +520,7 @@ body {
   align-items: center;
   gap: 44px;
   flex-shrink: 0;
-  font-family: var(--dusty-grey);
+  font-family: var(--space-grotest);
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.3em;
@@ -674,6 +688,8 @@ body {
   width: 100%;
   padding: 24px;
   z-index: 2;
+  transform: translateY(10px);
+  transition: transform 0.4s ease;
 }
 .build-img {
   width: 100%;
@@ -684,16 +700,6 @@ body {
 }
 .build-card:hover .build-img {
   transform: scale(1.08);
-}
-.build-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 24px;
-  z-index: 2;
-  transform: translateY(10px);
-  transition: transform 0.4s ease;
 }
 .build-card:hover .build-content {
   transform: translateY(0);
@@ -732,7 +738,7 @@ body {
   gap: 6px;
   transform: translateY(100px);
   opacity: 0;
-  transition: all.3s ease;
+  transition: all 0.3s ease;
 }
 .build-link::after {
   content: "→";
@@ -1303,6 +1309,21 @@ body {
   .spotlight-actions {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .spotlight-image-container {
+    height: 280px;
+  }
+  .tech-specs-grid {
+    grid-template-columns: 1fr;
+  }
+  .spec-value {
+    font-size: 22px;
+  }
+  .miku-edition {
+    padding: 80px 5%;
   }
 }
 
@@ -1914,6 +1935,12 @@ body {
   .input-row {
     flex-direction: column;
   }
+  /* iOS Safari auto-zoom fix: inputs must be 16px+ */
+  .initiate-form input,
+  .initiate-form select,
+  .initiate-form textarea {
+    font-size: 16px;
+  }
 }
 
 /* =========================================
@@ -2083,5 +2110,152 @@ body {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+  }
+}
+
+/* =========================================
+   GSAP ANIMATION INITIAL STATES
+   Elements start invisible; JS reveals them
+   ========================================= */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.anim-fade-in {
+  opacity: 0;
+}
+.anim-scale-up {
+  opacity: 0;
+  transform: scale(0.94) translateY(40px);
+}
+/* Hero elements start hidden — JS animates in on load */
+.hero-tag,
+.hero-title,
+.hero-sub,
+.hero-cta {
+  opacity: 0;
+  transform: translateY(40px);
+}
+/* Section headers */
+.section-header,
+.about-header,
+.reports-header {
+  opacity: 0;
+  transform: translateY(36px);
+}
+/* Build cards */
+.build-card {
+  opacity: 0;
+  transform: translateY(60px) scale(0.96);
+}
+/* Bento cards */
+.bento-card {
+  opacity: 0;
+  transform: translateY(50px);
+}
+/* Spotlight */
+.spotlight-content {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.spotlight-image-container {
+  opacity: 0;
+  transform: translateX(50px);
+}
+/* About */
+.about-content {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.about-visual-group {
+  opacity: 0;
+  transform: translateX(40px);
+}
+/* Review cards */
+.report-card {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* =========================================
+   FORM SUCCESS STATE
+   ========================================= */
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding: 60px 40px;
+  animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+.form-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.15);
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+.form-success h3 {
+  font-family: var(--font-title);
+  font-size: 28px;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+.form-success p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: rgba(0,0,0,0.7);
+}
+
+/* =========================================
+   SECTION SEPARATOR LINE
+   ========================================= */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  opacity: 0.2;
+}
+
+/* =========================================
+   SCROLL PROGRESS BAR
+   ========================================= */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-hover));
+  z-index: 9999;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* =========================================
+   MOBILE NAV ACTIVE LINK
+   ========================================= */
+@media (max-width: 900px) {
+  .nav-link.active {
+    color: var(--accent-primary);
+    transform: translateX(0);
+  }
+  /* Fix about tenets overflow on very narrow screens */
+  @media (max-width: 380px) {
+    .tenets-row {
+      grid-template-columns: 1fr;
+    }
+    .tenet {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
   }
 }
