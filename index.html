@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rajdhani:wght@400;500;600;700&family=Azeret+Mono:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <script
@@ -22,350 +22,428 @@
     ></script>
   </head>
   <body>
-    <nav class="nav-bar">
-      <div class="nav-content">
-        <div class="nav-logo">APEX</div>
-
-        <button
-          class="hamburger"
-          id="hamburgerBtn"
-          aria-label="Toggle menu"
-          aria-controls="navLinks"
-          aria-expanded="false"
-        >
-          <span></span><span></span><span></span>
-        </button>
-
-        <ul class="nav-links" id="navLinks">
+    <nav class="global-nav">
+      <div class="nav-wrapper">
+        <a href="#" class="nav-logo">APEX</a>
+        <ul class="nav-links">
           <li>
             <a href="#special-edition" class="nav-link">special edition</a>
           </li>
           <li><a href="#categories" class="nav-link">categories</a></li>
           <li><a href="#about" class="nav-link">about</a></li>
           <li><a href="#contact" class="nav-link">contact</a></li>
+          <li class="mobile-only">
+            <a href="#" class="nav-cta">initiate build</a>
+          </li>
         </ul>
 
-        <a href="#contact" class="nav-cta">Get Started</a>
+        <a href="#" class="nav-cta desktop-only">initiate build</a>
+
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
 
-    <section class="hero-premium" id="hero">
-      <div class="mega-text-bg">APEX</div>
+    <!-- =========================================
+          HERO-SECTION
+         ========================================= -->
 
-      <div class="ambient-light"></div>
-      <div class="grid-overlay"></div>
+    <section class="hero">
+      <img
+        src="Resource/Hero/hero-bg.jpg"
+        alt="APEX Custom PCs"
+        class="hero-bg"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tag">
+          power<span class="divider"> | </span>precision<span class="divider">
+            | </span
+          >perfection
+        </p>
 
-      <div class="particles-container">
-        <div class="ember"></div>
-        <div class="ember"></div>
-        <div class="ember"></div>
-        <div class="ember"></div>
-        <div class="ember"></div>
-        <div class="ember"></div>
-        <div class="ember"></div>
-        <div class="ember"></div>
+        <h1 class="hero-title">beyond <span class="highlight">limits</span></h1>
+
+        <p class="hero-sub">
+          Discover unprecedented detail in custom PC design, with every
+          component meticulously optimized for extreme power and style.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#arsenal" class="cta primary">View Arsenal</a>
+          <a href="#configure" class="cta secondary">Configure Own</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+          MARQUEE SECTION
+         ========================================= -->
+
+    <section class="mq-wrap">
+      <div class="mq-inner">
+        <div class="mq-item">
+          Zero Compromise<span class="mq-dot"></span> Immaculate Cable
+          Management<span class="mq-dot"></span> Extreme Overclocking<span
+            class="mq-dot"
+          ></span>
+          100% Stress Tested<span class="mq-dot"></span> Republic of
+          Performance<span class="mq-dot"></span> Custom Loop Cooling<span
+            class="mq-dot"
+          ></span>
+          Precision Engineering<span class="mq-dot"></span> Lifetime
+          Support<span class="mq-dot"></span> 48H Build Time<span
+            class="mq-dot"
+          ></span>
+        </div>
+
+        <div class="mq-item">
+          Zero Compromise<span class="mq-dot"></span> Immaculate Cable
+          Management<span class="mq-dot"></span> Extreme Overclocking<span
+            class="mq-dot"
+          ></span>
+          100% Stress Tested<span class="mq-dot"></span> Republic of
+          Performance<span class="mq-dot"></span> Custom Loop Cooling<span
+            class="mq-dot"
+          ></span>
+          Precision Engineering<span class="mq-dot"></span> Lifetime
+          Support<span class="mq-dot"></span> 48H Build Time<span
+            class="mq-dot"
+          ></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+          ARSENAL SECTION
+         ========================================= -->
+
+    <section class="special-edition">
+      <div class="section-header">
+        <div class="section-tag">
+          <div></div>
+          <p class="section-tag-name">02 / the arsenal</p>
+        </div>
+        <div class="header-box">
+          <h2 class="section-title">
+            signature <span class="highlight">builds</span>
+          </h2>
+          <p class="section-sub">explore more<span> > </span></p>
+        </div>
       </div>
 
-      <div class="hero-wrapper">
-        <div class="hero-content reveal-on-scroll">
-          <div class="hero-badge">
-            <span class="pulse-dot"></span>
-            <span class="badge-text">2026 FLAGSHIP SERIES</span>
+      <div class="arsenal-content">
+        <div class="arsenal-wrapper">
+          <div
+            class="build-card"
+            style="--card-color: #f56e0f; --card-color-dark: #cc5500"
+          >
+            <div class="build-info">
+              <img
+                src="Resource/Hero/dominator.png"
+                alt="The Dominator"
+                class="build-img"
+              />
+              <div class="build-content">
+                <h2 class="build-name">The<br />Dominator</h2>
+                <p class="build-sub">Pushed Beyond Limits</p>
+                <a href="#dominator" class="build-link">View Build</a>
+              </div>
+            </div>
+            <div class="build-tag">
+              <div class="build-type">01 / Flagship</div>
+              <div class="circle"></div>
+            </div>
           </div>
 
-          <h1 class="hero-title">
-            BEYOND <br />
-            <span class="text-glow">COMPROMISE</span>
-          </h1>
+          <div
+            class="build-card"
+            style="--card-color: #ffb700; --card-color-dark: #cc9200"
+          >
+            <div class="build-info">
+              <img
+                src="Resource/Hero/creator.png"
+                alt="The Creator"
+                class="build-img"
+              />
+              <div class="build-content">
+                <h2 class="build-name">The<br />Creator</h2>
+                <p class="build-sub">Unrestricted Rendering</p>
+                <a href="#creator" class="build-link">View Build</a>
+              </div>
+            </div>
+            <div class="build-tag">
+              <div class="build-type">02 / Workstation</div>
+              <div class="circle"></div>
+            </div>
+          </div>
 
-          <p class="hero-sub">
-            Hand-crafted, aggressively tuned, and aesthetically flawless custom
-            PCs. Engineered for those who refuse to settle for ordinary.
+          <div
+            class="build-card"
+            style="--card-color: #00e5ff; --card-color-dark: #00a6cc"
+          >
+            <div class="build-info">
+              <img
+                src="Resource/Hero/ice-white.png"
+                alt="Ice White"
+                class="build-img"
+              />
+              <div class="build-content">
+                <h2 class="build-name">Ice<br />White</h2>
+                <p class="build-sub">Zero-RPM Acoustics</p>
+                <a href="#ice-white" class="build-link">View Build</a>
+              </div>
+            </div>
+            <div class="build-tag">
+              <div class="build-type">03 / Custom Loop</div>
+              <div class="circle"></div>
+            </div>
+          </div>
+
+          <div
+            class="build-card"
+            style="--card-color: #f1f1f1; --card-color-dark: #7a7a7a"
+          >
+            <div class="build-info">
+              <img
+                src="Resource/Hero/stealth-black.png"
+                alt="Stealth Black"
+                class="build-img"
+              />
+              <div class="build-content">
+                <h2 class="build-name">Stealth<br />Black</h2>
+                <p class="build-sub">Minimalist Footprint</p>
+                <a href="#stealth-black" class="build-link">View Build</a>
+              </div>
+            </div>
+            <div class="build-tag">
+              <div class="build-type">04 / Minimalist</div>
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+          CATEGORIES SECTION
+         ========================================= -->
+
+    <section class="categories-section">
+      <div class="section-header">
+        <div class="section-tag">
+          <div></div>
+          <p class="section-tag-name">03 / platform</p>
+        </div>
+        <div class="header-box">
+          <h2 class="section-title">
+            select <span class="highlight">Category</span>
+          </h2>
+          <p class="section-sub">View All Platforms<span> > </span></p>
+        </div>
+      </div>
+
+      <div class="bento-grid">
+        <a href="" class="bento-card bento-hero">
+          <img src="Resource/Hero/gaming.jpg" alt="" class="bento-bg" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-badge">Max FPS</div>
+            <h2 class="bento-title">
+              Gaming & <br />
+              Enthusiast
+            </h2>
+            <p class="bento-desc">
+              Uncompromised frame rates and extreme overclocking potential.
+            </p>
+            <span class="bento-link">Exlpore Gaming</span>
+          </div>
+        </a>
+
+        <a href="" class="bento-card bento-std">
+          <img src="Resource/Hero/workstation.jpg" alt="" class="bento-bg" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-badge">Pro Grade</div>
+            <h2 class="bento-title">Creator <br />Workstation</h2>
+            <span class="bento-link">Exlpore Pro</span>
+          </div>
+        </a>
+
+        <a href="" class="bento-card bento-std">
+          <img src="Resource/Hero/watercooling.png" alt="" class="bento-bg" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-badge">Artisan</div>
+            <h2 class="bento-title">Custom <br />Watercooling</h2>
+            <span class="bento-link">Exlpore Loops</span>
+          </div>
+        </a>
+
+        <a href="" class="bento-card bento-std">
+          <img src="Resource/Hero/linited.png" alt="" class="bento-bg" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-badge" style="color: #000; background: #ffb700">
+              Collab
+            </div>
+            <h2 class="bento-title">Limited <br />Edition</h2>
+            <span class="bento-link">View Drops</span>
+          </div>
+        </a>
+
+        <a href="" class="bento-card bento-std">
+          <img src="Resource/Hero/professional.jpg" alt="" class="bento-bg" />
+          <div class="bento-overlay"></div>
+          <div class="bento-content">
+            <div class="bento-badge" style="color: #fff; background: #333">
+              Business
+            </div>
+            <h2 class="bento-title">Professional <br />Office</h2>
+            <span class="bento-link">View Fleets</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================
+          SPOTLIGHT SECTION
+         ========================================= -->
+
+    <section class="spotlight-section miku-edition" id="spotlight">
+      <div class="spotlight-wrapper">
+        <div class="spotlight-content">
+          <div class="spotlight-tag">
+            <div class="line"></div>
+            <span>04 / Official Collaboration</span>
+          </div>
+
+          <h2 class="spotlight-title">
+            Project:<br /><span class="highlight-miku">Miku.</span>
+          </h2>
+
+          <p class="spotlight-desc">
+            Bridging the gap between synthetic sound and raw compute. The
+            official Hatsune Miku x APEX collaboration. Limited to exactly 39
+            units worldwide, featuring a bespoke teal hardline loop and an
+            integrated 4K touch-panel for live system telemetry.
           </p>
 
-          <!-- <div class="hero-specs-row">
-            <div class="spec-micro">
-              <span class="micro-label">ARCHITECTURE</span>
-              <span class="micro-value">ZEN 5 / BLACKWELL</span>
+          <div class="tech-specs-grid">
+            <div class="spec-item">
+              <span class="spec-value">01 / 39</span>
+              <span class="spec-label">Global Allocation</span>
             </div>
-            <div class="spec-micro">
-              <span class="micro-label">THERMALS</span>
-              <span class="micro-value">CUSTOM LOOP</span>
+            <div class="spec-item">
+              <span class="spec-value">Helios II</span>
+              <span class="spec-label">Asus Rog ATX</span>
             </div>
-            <div class="spec-micro">
-              <span class="micro-label">ACOUSTICS</span>
-              <span class="micro-value">0dB IDLE</span>
+            <div class="spec-item">
+              <span class="spec-value">Handcraft</span>
+              <span class="spec-label">design</span>
             </div>
-          </div> -->
+          </div>
 
-          <div class="hero-actions">
-            <a href="#special-edition" class="btn-primary-epic">
-              <span>EXPLORE BUILDS</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#contact" class="btn-secondary-epic">CONFIGURE YOUR OWN</a>
+          <div class="spotlight-actions">
+            <a href="#reserve" class="spotlight-cta">Reserve Unit →</a>
+            <span class="stock-status"
+              ><div class="pulse-dot-magenta"></div>
+              3 Units Remaining</span
+            >
           </div>
         </div>
 
-        <div class="hero-visual-stage">
-          <div class="pc-container">
-            
-            <div class="pc-ambient-glow"></div>
-            
-            <img
-              src="Resource/hero-bg-edit.png"
-              alt="APEX Ultimate Build"
-              class="hero-pc-image"
-            />
+        <div class="spotlight-image-container">
+          <img
+            src="Resource/Hero/miku.png"
+            alt="Hatsune Miku PC Details"
+            class="spotlight-img"
+          />
 
-            <!-- <div class="hud-element hud-1">
-              <div class="hud-dot"></div>
-              <div class="hud-line"></div>
-              <div class="hud-panel">
-                <p class="hud-title">PANORAMIC GLASS</p>
-                <p class="hud-desc">Seamless edge-to-edge view</p>
-              </div>
-            </div>
+          <div class="miku-grid-overlay"></div>
 
-            <div class="hud-element hud-2">
-              <div class="hud-dot"></div>
-              <div class="hud-line"></div>
-              <div class="hud-panel">
-                <p class="hud-title">ASTRAL 5090</p>
-                <p class="hud-desc">Vertical mount orientation</p>
-              </div>
-            </div> -->
-            
+          <div class="floating-badge">
+            <div class="pulse-dot-teal"></div>
+            <span>VOCAL-CORE [ACTIVE]</span>
           </div>
-        </div>
-
-      <div class="scroll-indicator">
-        <p>SCROLL</p>
-        <div class="scroll-line-container">
-          <div class="scroll-line-fill"></div>
         </div>
       </div>
     </section>
 
-    <section class="philosophy-cinematic">
-      <div class="mega-text-bg">STANDARD</div>
+    <!-- =========================================
+          ABOUT SECTION
+         ========================================= -->
 
-      <div class="ambient-light"></div>
-      <div class="grid-overlay"></div>
-
-      <div class="philo-container">
-        <div class="section-header">
-          <span class="section-label">
-            <span class="pulse-dot"></span> THE APEX STANDARD
-          </span>
-          <h2 class="section-title">
-            Engineered to <span class="text-glow">Dominate</span>
-          </h2>
-        </div>
-
-        <div class="philo-cards-row reveal-stagger">
-          <div class="philo-mini-card spotlight-card">
-            <div class="mini-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                <path
-                  d="M360-360v-240h240v240H360Zm80-80h80v-80h-80v80Zm-80 320v-80h-80q-33 0-56.5-23.5T200-280v-80h-80v-80h80v-80h-80v-80h80v-80q0-33 23.5-56.5T280-760h80v-80h80v80h80v-80h80v80h80q33 0 56.5 23.5T760-680v80h80v80h-80v80h80v80h-80v80q0 33-23.5 56.5T680-200h-80v80h-80v-80h-80v80h-80Zm320-160v-400H280v400h400ZM480-480Z"
-                />
-              </svg>
-            </div>
-            <div class="mini-card-content">
-              <h4 class="mini-title">Perfect Engineering</h4>
-              <p class="mini-desc">
-                Millimeter-perfect cable routing and flawless component
-                integration.
-              </p>
-            </div>
-          </div>
-
-          <div class="philo-mini-card spotlight-card">
-            <div class="mini-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                <path
-                  d="M480-316.5q38-.5 56-27.5l224-336-336 224q-27 18-28.5 55t22.5 61q24 24 62 23.5Zm0-483.5q59 0 113.5 16.5T696-734l-76 48q-33-17-68.5-25.5T480-720q-133 0-226.5 93.5T160-400q0 42 11.5 83t32.5 77h552q23-38 33.5-79t10.5-85q0-36-8.5-70T766-540l48-76q30 47 47.5 100T880-406q1 57-13 109t-41 99q-11 18-30 28t-40 10H204q-21 0-40-10t-30-28q-26-45-40-95.5T80-400q0-83 31.5-155.5t86-127Q252-737 325-768.5T480-800Zm7 313Z"
-                />
-              </svg>
-            </div>
-            <div class="mini-card-content">
-              <h4 class="mini-title">Uncompromising Power</h4>
-              <p class="mini-desc">
-                Equipped exclusively with flagship-tier processors and graphics.
-              </p>
-            </div>
-          </div>
-
-          <div class="philo-mini-card spotlight-card">
-            <div class="mini-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                <path
-                  d="M367-527q-47-47-47-113t47-113q47-47 113-47t113 47q47 47 47 113t-47 113q-47 47-113 47t-113-47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm296.5-343.5Q560-607 560-640t-23.5-56.5Q513-720 480-720t-56.5 23.5Q400-673 400-640t23.5 56.5Q447-560 480-560t56.5-23.5ZM480-640Zm0 400Z"
-                />
-              </svg>
-            </div>
-            <div class="mini-card-content">
-              <h4 class="mini-title">Crafted for You</h4>
-              <p class="mini-desc">
-                Fully customizable aesthetics and bespoke tuning tailored
-                directly to you.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Special Edition -->
-    <section class="featured-sec" id="special-edition">
-      <div class="section-header path-header">
-        <span class="section-label">
-          <span class="pulse-dot"></span> NEXT STEPS
-        </span>
-        <h2 class="section-title">
-          Exclusive <span class="text-glow">Builds</span>
-        </h2>
-      </div>
-      
-      <div class="featured-grid">
-        
-        <div class="feature-card theme-orange spotlight-card reveal-on-scroll">
-          <img src="Resource/lava.png" alt="The Dominator" class="build-img">
-          <div class="card-overlay"></div>
-          <div class="card-content">
-            <div class="build-tag">[ RAW POWER ]</div>
-            <div class="build-info">
-              <h3 class="build-name">The Dominator</h3>
-              <a href="Feature-build/dominator.html" class="build-link">
-                View Build <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
+    <section class="about-section" id="about">
+      <div class="about-wrapper">
+        <div class="about-header">
+          <div class="section-tag">
+            <div></div>
+            <p class="section-tag-name">05 / the philosophy</p>
           </div>
         </div>
 
-        <div class="feature-card theme-violet spotlight-card reveal-on-scroll">
-          <img src="Resource/lava.png" alt="The Creator" class="build-img">
-          <div class="card-overlay"></div>
-          <div class="card-content">
-            <div class="build-tag">[ PERFECTION ]</div>
-            <div class="build-info">
-              <h3 class="build-name">The Creator</h3>
-              <a href="#" class="build-link">
-                View Build <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+        <div class="about-grid">
+          <div class="about-content">
+            <h2 class="about-title">
+              Born From <br /><span class="highlight">Obsession.</span>
+            </h2>
 
-        <div class="feature-card theme-teal spotlight-card reveal-on-scroll">
-          <img src="Resource/lava.png" alt="Hatsune Miku" class="build-img">
-          <div class="card-overlay"></div>
-          <div class="card-content">
-            <div class="build-tag">[ LIMITED EDITION ]</div>
-            <div class="build-info">
-              <h3 class="build-name">Hatsune Miku</h3>
-              <a href="#" class="build-link">
-                View Build <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-card theme-gray spotlight-card reveal-on-scroll">
-          <img src="Resource/lava.png" alt="The Killer" class="build-img">
-          <div class="card-overlay"></div>
-          <div class="card-content">
-            <div class="build-tag">[ STEALTH ]</div>
-            <div class="build-info">
-              <h3 class="build-name">The Killer</h3>
-              <a href="#" class="build-link">
-                View Build <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    
-    <!-- Category Section -->
-    <section class="path-section" id="categories">
-      <div class="section-header path-header">
-        <span class="section-label">
-          <span class="pulse-dot"></span> NEXT STEPS
-        </span>
-        <h2 class="section-title">
-          Choose Your <span class="text-glow">Path</span>
-        </h2>
-      </div>
-
-      <div class="split-container">
-        <a href="#special-edition" class="path-panel prebuilt-panel spotlight-card reveal-on-scroll">
-          <div class="path-bg">
-            <img
-              src="Resource/landing-assets/pc.png"
-              alt="Prebuilt Systems"
-            />
-            <div class="path-overlay"></div>
-          </div>
-
-          <div class="path-content">
-            <div class="hud-corner top-left"></div>
-            <div class="hud-corner bottom-right"></div>
-
-            <span class="path-badge">READY TO SHIP</span>
-            <h3 class="path-title">Prebuilt<br />Systems</h3>
-            <p class="path-desc">
-              Expert-optimized component pairings. Hand-assembled,
-              stress-tested, and shipped directly to your door in 3-5 days. Zero
-              wait, zero compromise.
+            <p class="lead-text">
+              We started APEX because we were tired of the plastic,
+              mass-produced mediocrity flooding the market. A PC shouldn't just
+              be an appliance; it should be an instrument of absolute power.
+            </p>
+            <p class="sub-text">
+              Every system that leaves our lab is treated as a one-of-a-kind
+              commission. From mathematically perfect hardline tube routing to
+              aerospace-grade thermal compounds, we obsess over the microscopic
+              details that others ignore. We don't just build computers. We
+              forge artifacts.
             </p>
 
-            <div class="path-btn">
-              Browse Collection <i class="fa-solid fa-arrow-right"></i>
+            <div class="founder-block">
+              <div class="founder-line"></div>
+              <span class="sign-name">Vasanthan</span>
+              <span class="sign-title">Lead Architect & Founder</span>
             </div>
           </div>
-        </a>
 
-        <a href="#contact" class="path-panel custom-panel spotlight-card reveal-on-scroll">
-          <div class="path-bg">
-            <img
-              src="Resource/landing-assets/pc.png"
-              alt="Custom Configurator"
-            />
-            <div class="path-overlay"></div>
-          </div>
+          <div class="about-visual-group">
+            <div class="about-image-wrapper">
+              <img
+                src="Resource/Hero/workshop.png"
+                alt="APEX Assembly Lab"
+                class="about-img"
+              />
+              <div class="about-overlay"></div>
+              <div class="corner top-left"></div>
+              <div class="corner bottom-right"></div>
+            </div>
 
-          <div class="path-content">
-            <div class="hud-corner top-right"></div>
-            <div class="hud-corner bottom-left"></div>
-
-            <span class="path-badge">TAKE CONTROL</span>
-            <h3 class="path-title">Custom<br />Configurator</h3>
-            <p class="path-desc">
-              Your vision, our expertise. Hand-pick every component, coordinate
-              your RGB ecosystem, and engineer a machine that is uniquely yours.
-            </p>
-
-            <div class="path-btn">
-              Start Building <i class="fa-solid fa-arrow-right"></i>
+            <div class="tenets-row">
+              <div class="tenet">
+                <span class="tenet-num">01</span>
+                <span class="tenet-label">Artisan<br />Assembly</span>
+              </div>
+              <div class="tenet">
+                <span class="tenet-num">02</span>
+                <span class="tenet-label">Extreme<br />Binning</span>
+              </div>
+              <div class="tenet">
+                <span class="tenet-num">03</span>
+                <span class="tenet-label">White-Glove<br />Support</span>
+              </div>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     </section>
+
+    <!-- =========================================
+          PARTNER SECTION
+         ========================================= -->
 
     <section class="partners-section">
       <div class="partners-title">TRUSTED BY THE BEST</div>
@@ -377,13 +455,11 @@
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo nvidia"
-            ><img
-              src="Resource/landing-assets/nvidia-logo.svg"
-              alt="NVIDIA logo"
+            ><img src="Resource/logo/nvidia-logo.svg" alt="NVIDIA logo"
           /></a>
           <a href="#contact" aria-label="Partner logo" class="partner-logo amd"
             ><img
-              src="Resource/landing-assets/amd-logo.svg"
+              src="Resource/logo/amd-logo.svg"
               alt="AMD logo"
               style="color: #ffffff"
           /></a>
@@ -391,79 +467,63 @@
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo intel"
-            ><img src="Resource/landing-assets/intel-logo.svg" alt="Intel logo"
+            ><img src="Resource/logo/intel-logo.svg" alt="Intel logo"
           /></a>
           <a href="#contact" aria-label="Partner logo" class="partner-logo rog"
-            ><img
-              src="Resource/landing-assets/asus-rog-logo.svg"
-              alt="ASUS ROG logo"
+            ><img src="Resource/logo/asus-rog-logo.svg" alt="ASUS ROG logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo corsair"
-            ><img
-              src="Resource/landing-assets/corsair-logo.svg"
-              alt="Corsair logo"
+            ><img src="Resource/logo/corsair-logo.svg" alt="Corsair logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo lianli"
-            ><img
-              src="Resource/landing-assets/lian-li-logo.svg"
-              alt="Lian Li logo"
+            ><img src="Resource/logo/lian-li-logo.svg" alt="Lian Li logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo cooler"
             ><img
-              src="Resource/landing-assets/cooler-master-logo.svg"
+              src="Resource/logo/Cooler-master-logo.svg"
               alt="Cooler Master logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo deepcool"
-            ><img
-              src="Resource/landing-assets/deep-cool-logo.svg"
-              alt="DeepCool logo"
+            ><img src="Resource/logo/deep-cool-logo.svg" alt="DeepCool logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo gigabyte"
-            ><img
-              src="Resource/landing-assets/gigabyte.svg"
-              alt="Gigabyte logo"
+            ><img src="Resource/logo/gigabyte.svg" alt="Gigabyte logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo samsung"
-            ><img
-              src="Resource/landing-assets/samsung-logo.svg"
-              alt="Samsung logo"
+            ><img src="Resource/logo/samsung-logo.svg" alt="Samsung logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo seasonic"
-            ><img
-              src="Resource/landing-assets/seasomic-logo.svg"
-              alt="Seasonic logo"
+            ><img src="Resource/logo/seasomic-logo.svg" alt="Seasonic logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo asrock"
-            ><img
-              src="Resource/landing-assets/asrock-logo.svg"
-              alt="ASRock logo"
+            ><img src="Resource/logo/asrock-logo.svg" alt="ASRock logo"
           /></a>
           <a href="#contact" aria-label="Partner logo" class="partner-logo nzxt"
-            ><img src="Resource/landing-assets/NXZT-logo.svg" alt="NZXT logo"
+            ><img src="Resource/logo/NXZT-logo.svg" alt="NZXT logo"
           /></a>
 
           <!-- ===== DUPLICATE SET FOR INFINITE LOOP ===== -->
@@ -471,264 +531,327 @@
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo nvidia"
-            ><img
-              src="Resource/landing-assets/nvidia-logo.svg"
-              alt="NVIDIA logo"
+            ><img src="Resource/logo/nvidia-logo.svg" alt="NVIDIA logo"
           /></a>
           <a href="#contact" aria-label="Partner logo" class="partner-logo amd"
-            ><img src="Resource/landing-assets/amd-logo.svg" alt="AMD logo"
+            ><img
+              src="Resource/logo/amd-logo.svg"
+              alt="AMD logo"
+              style="color: #ffffff"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo intel"
-            ><img src="Resource/landing-assets/intel-logo.svg" alt="Intel logo"
+            ><img src="Resource/logo/intel-logo.svg" alt="Intel logo"
           /></a>
           <a href="#contact" aria-label="Partner logo" class="partner-logo rog"
-            ><img
-              src="Resource/landing-assets/asus-rog-logo.svg"
-              alt="ASUS ROG logo"
+            ><img src="Resource/logo/asus-rog-logo.svg" alt="ASUS ROG logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo corsair"
-            ><img
-              src="Resource/landing-assets/corsair-logo.svg"
-              alt="Corsair logo"
+            ><img src="Resource/logo/corsair-logo.svg" alt="Corsair logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo lianli"
-            ><img
-              src="Resource/landing-assets/lian-li-logo.svg"
-              alt="Lian Li logo"
+            ><img src="Resource/logo/lian-li-logo.svg" alt="Lian Li logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo cooler"
             ><img
-              src="Resource/landing-assets/cooler-master-logo.svg"
+              src="Resource/logo/Cooler-master-logo.svg"
               alt="Cooler Master logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo deepcool"
-            ><img
-              src="Resource/landing-assets/deep-cool-logo.svg"
-              alt="DeepCool logo"
+            ><img src="Resource/logo/deep-cool-logo.svg" alt="DeepCool logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo gigabyte"
-            ><img
-              src="Resource/landing-assets/gigabyte.svg"
-              alt="Gigabyte logo"
+            ><img src="Resource/logo/gigabyte.svg" alt="Gigabyte logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo samsung"
-            ><img
-              src="Resource/landing-assets/samsung-logo.svg"
-              alt="Samsung logo"
+            ><img src="Resource/logo/samsung-logo.svg" alt="Samsung logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo seasonic"
-            ><img
-              src="Resource/landing-assets/seasomic-logo.svg"
-              alt="Seasonic logo"
+            ><img src="Resource/logo/seasomic-logo.svg" alt="Seasonic logo"
           /></a>
           <a
             href="#contact"
             aria-label="Partner logo"
             class="partner-logo asrock"
-            ><img
-              src="Resource/landing-assets/asrock-logo.svg"
-              alt="ASRock logo"
+            ><img src="Resource/logo/asrock-logo.svg" alt="ASRock logo"
           /></a>
           <a href="#contact" aria-label="Partner logo" class="partner-logo nzxt"
-            ><img src="Resource/landing-assets/NXZT-logo.svg" alt="NZXT logo"
+            ><img src="Resource/logo/NXZT-logo.svg" alt="NZXT logo"
           /></a>
         </div>
       </div>
     </section>
 
-    <!-- About section -->
+    <!-- =========================================
+          REVIEW SECTION
+         ========================================= -->
 
-    <section class="about-cinematic" id="about">
-      <div class="about-ambient-glow"></div>
-
-      <div class="about-wrapper">
-        <div class="about-content reveal-on-scroll">
-          <div class="section-header align-left">
-            <span class="section-label">
-              <span class="pulse-dot"></span> OUR STORY
-            </span>
-            <h2 class="section-title">
-              We Build<br /><span class="text-glow">What Matters.</span>
-            </h2>
+    <section class="reports-section" id="reviews">
+      <div class="reports-wrapper">
+        <div class="reports-header">
+          <div class="section-tag">
+            <div class="line"></div>
+            <p class="section-tag-name">04 / Field Reports</p>
           </div>
-
-          <div class="about-text-block">
-            <p>
-              Founded by a team of overclockers, modders, and gaming veterans,
-              APEX was born from a simple belief: PC building should be an art
-              form, not a commodity.
-            </p>
-            <p>
-              Every system we create represents countless hours of testing,
-              tuning, and refinement. We don't just assemble components â€” we
-              engineer experiences designed to push the absolute limits of
-              modern hardware.
-            </p>
-          </div>
-
-          <div class="telemetry-stats">
-            <div class="stat-module">
-              <div class="stat-data">
-                <span class="stat-number" data-count="5000">5,000</span
-                ><span class="stat-plus">+</span>
-              </div>
-              <span class="stat-label">Builds Delivered</span>
-            </div>
-
-            <div class="stat-module">
-              <div class="stat-data">
-                <span class="stat-number" data-count="98">98</span
-                ><span class="stat-plus">%</span>
-              </div>
-              <span class="stat-label">Satisfaction Rate</span>
-            </div>
-
-            <div class="stat-module">
-              <div class="stat-data">
-                <span class="stat-number" data-count="3">3</span
-                ><span class="stat-plus">YR</span>
-              </div>
-              <span class="stat-label">Full Warranty</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-visual-stage">
-          <div class="visual-frame">
-            <div class="frame-corner top-left"></div>
-            <div class="frame-corner bottom-right"></div>
-            <div class="workshop-img-placeholder">
-              <img src="Resource/workshop.png" alt="">
-              <span class="overlay-data">SYS.01 // LAB.ACTIVE</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="elite-form-section" id="contact">
-      <div class="form-container">
-        <div class="hud-bracket left-bracket"></div>
-        <div class="hud-bracket right-bracket"></div>
-
-        <div class="form-content">
-          <h2 class="form-title">
-            JOIN THE <span class="text-glow">ELITE</span>
+          <h2 class="reports-title">
+            FROM THE <span class="highlight">OPERATORS</span>
           </h2>
-          <p class="form-desc">
-            Subscribe to our secure network for classified hardware drops,
-            limited edition chassis releases, and VIP early access.
-          </p>
+        </div>
 
-          <form class="cinematic-form">
-            <div class="input-wrapper">
-              <input
-                type="email"
-                placeholder="ENTER SECURE EMAIL ADDRESS"
-                required
-              />
-              <div class="input-focus-line"></div>
+        <div class="reports-grid">
+          <div class="report-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
             </div>
-            <button type="submit" class="btn-submit-epic">
-              <span>INITIALIZE</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
-          <p class="form-disclaimer">
-            Zero spam. Pure performance. Unsubscribe anytime.
-          </p>
+            <p class="report-text">
+              "The Dominator Ultra is the most well-built PC I've ever owned.
+              Cable management is surgical. Runs 30°C cooler than my self-build.
+              Worth every penny."
+            </p>
+            <div class="reviewer-meta">
+              <div class="r-badge">RK</div>
+              <div class="r-details">
+                <span class="r-name">R. Kovacs</span>
+                <span class="r-build">Dominator Ultra — RTX 4090</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="report-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="report-text">
+              "As a video editor working in 8K, the Creator Pro X halved my
+              render times. The ECC config alone was worth the consultation call
+              with their team."
+            </p>
+            <div class="reviewer-meta">
+              <div class="r-badge">SJ</div>
+              <div class="r-details">
+                <span class="r-name">S. Johansson</span>
+                <span class="r-build">Creator Pro X — Threadripper</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="report-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="report-text">
+              "The hardline loop build looks like it came from a spaceship. I've
+              owned a dozen machines, but the quality here is on a completely
+              different level."
+            </p>
+            <div class="reviewer-meta">
+              <div class="r-badge">MT</div>
+              <div class="r-details">
+                <span class="r-name">M. Torres</span>
+                <span class="r-build">Arctic White — Custom Hardline</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- =========================================
+          FORM
+         ========================================= -->
+    <section class="initiate-section" id="contact">
+      <div class="initiate-wrapper">
+        <div class="cta-card">
+          <div class="cta-content">
+            <h2>
+              READY TO BUILD<br />SOMETHING
+              <span class="highlight-dark">LEGENDARY?</span>
+            </h2>
+            <p>
+              Tell us your needs. We handle the rest — from spec consultation to
+              stress-tested delivery.
+            </p>
+          </div>
+
+          <div class="cta-form-container">
+            <form class="initiate-form">
+              <div class="input-row">
+                <input type="text" placeholder="Name / Callsign" required />
+                <input type="email" placeholder="Email Comm-Link" required />
+              </div>
+              <div class="input-row">
+                <select required>
+                  <option value="" disabled selected>Select Primary Use</option>
+                  <option value="gaming">Enthusiast Gaming</option>
+                  <option value="creator">3D / Video Production</option>
+                  <option value="hybrid">Hybrid (Do It All)</option>
+                </select>
+                <select required>
+                  <option value="" disabled selected>Target Budget</option>
+                  <option value="3k">$3,000 - $5,000</option>
+                  <option value="5k">$5,000 - $10,000</option>
+                  <option value="10k+">$10,000+ (No Compromise)</option>
+                </select>
+              </div>
+              <textarea
+                placeholder="Briefly describe your dream build..."
+                rows="3"
+              ></textarea>
+              <button type="submit" class="submit-btn">
+                START YOUR BUILD →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+          GLOBAL FOOTER
+         ========================================= -->
 
     <footer class="apex-footer">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="nav-logo">APEX</div>
-          <p class="brand-mission">
-            Beyond Compromise. Hand-crafted, aggressively tuned custom PCs for
-            those who demand the absolute best.
+      <div class="footer-wrapper">
+        <div class="footer-top">
+          <div class="footer-brand-col">
+            <h2 class="footer-logo">APEX</h2>
+            <p class="footer-desc">
+              Precision custom PC builds for those who demand the absolute best.
+              No compromises. No shortcuts.
+            </p>
+            <div class="footer-socials">
+              <a href="#" aria-label="X (Twitter)"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="#" aria-label="Twitch"
+                ><i class="fa-brands fa-twitch"></i
+              ></a>
+              <a href="#" aria-label="Discord"
+                ><i class="fa-brands fa-discord"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading">Builds</h4>
+            <a href="#">Gaming Systems</a>
+            <a href="#">Workstations</a>
+            <a href="#">Custom Loop</a>
+            <a href="#">Compact ITX</a>
+            <a href="#">Collab Builds</a>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading">Company</h4>
+            <a href="#">Our Process</a>
+            <a href="#">Warranty</a>
+            <a href="#">Shipping</a>
+            <a href="#">Gallery</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-heading">Support</h4>
+            <a href="#">FAQs</a>
+            <a href="#">Track Build</a>
+            <a href="#">Troubleshoot</a>
+            <a href="#">Parts Upgrade</a>
+            <a href="#">RMA</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">
+            &copy; 2026 APEX Systems. All rights reserved.
           </p>
-        </div>
-
-        <div class="footer-links-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#about">Our Process</a></li>
-            <li><a href="#contact">Warranty Info</a></li>
-            <li><a href="#contact">Careers</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-col">
-          <h4>Hardware</h4>
-          <ul>
-            <li><a href="#special-edition">Exclusive Builds</a></li>
-            <li><a href="#categories">Custom Configurator</a></li>
-            <li><a href="#special-edition">Special Editions</a></li>
-            <li><a href="#contact">Upgrades & Parts</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-col">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#contact">Contact Support</a></li>
-            <li><a href="#contact">FAQ & Guides</a></li>
-            <li><a href="#contact">Shipping Status</a></li>
-            <li><a href="#contact">Returns Policy</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="copyright">&copy; 2026 APEX Systems. All rights reserved.</p>
-        <div class="legal-links">
-          <a href="#contact">Privacy Policy</a>
-          <a href="#contact">Terms of Service</a>
-          <a href="#contact">Cookie Settings</a>
-        </div>
-        <div class="social-links">
-          <a href="#contact" aria-label="Discord"
-            ><i class="fa-brands fa-discord"></i
-          ></a>
-          <a href="#contact" aria-label="YouTube"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-          <a href="#contact" aria-label="Instagram"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="#contact" aria-label="X / Twitter"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>
-    <script src="index.js"></script>
+    <script>
+      /* NAV HAMBURGER & ANIMATIONS */
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const body = document.body;
+
+      // Select all the list items inside the mobile menu
+      const navItems = document.querySelectorAll(".nav-links li");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+
+        if (navLinks.classList.contains("active")) {
+          // Menu is opening: Lock scrolling
+          body.style.overflow = "hidden";
+
+          // Add staggered delay to each link so they waterfall in
+          navItems.forEach((item, index) => {
+            // 0.2s initial delay (waits for menu bg to slide in), then adds 0.1s per link
+            item.style.transitionDelay = `${0.2 + index * 0.1}s`;
+          });
+        } else {
+          // Menu is closing: Unlock scrolling
+          body.style.overflow = "auto";
+
+          // Instantly remove the delays so they disappear cleanly when closing
+          navItems.forEach((item) => {
+            item.style.transitionDelay = "0s";
+          });
+        }
+      });
+
+      // Close menu gracefully when a link is clicked
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+          body.style.overflow = "auto";
+
+          // Reset delays
+          navItems.forEach((item) => {
+            item.style.transitionDelay = "0s";
+          });
+        });
+      });
+    </script>
   </body>
 </html>
