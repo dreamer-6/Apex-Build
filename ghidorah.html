@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="APEX Three Storms — Ghidorah Edition. 33 units. Gravitational-class compute." />
+  <title>APEX | Three Storms — Ghidorah</title>
+  <link rel="stylesheet" href="builds.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/5f6a32d955.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --char-primary:   #f5c400;
+      --char-secondary: #fff3a0;
+      --char-bg:        #060501;
+      --char-glow:      rgba(245, 196, 0, 0.45);
+      --char-dim:       rgba(245, 196, 0, 0.08);
+      --char-border:    rgba(245, 196, 0, 0.13);
+      --char-border-h:  rgba(245, 196, 0, 0.38);
+    }
+  </style>
+  <script>
+    window.BUILD_CONFIG = {
+      loaderStatuses: [
+        "INITIALIZING STORM SYSTEM...",
+        "CHARGING GRAVITATIONAL ARRAY...",
+        "SYNCHRONIZING THREE HEADS...",
+        "IONIZING LIGHTNING CHANNELS...",
+        "KING GHIDORAH ONLINE."
+      ],
+      charColor: "#f5c400",
+      formSuccessColor: "#d4a700",
+    };
+  </script>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">APEX <span>×</span> GHIDORAH</div>
+      <div class="loader-bar-track"><div class="loader-bar-fill" id="loaderBar"></div></div>
+      <div class="loader-status" id="loaderStatus">INITIALIZING STORM SYSTEM...</div>
+    </div>
+  </div>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <nav class="global-nav" id="globalNav">
+    <a href="index.html" class="home-link">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M8 3l-5 5 5 5"/></svg>
+      <span>Return to APEX</span>
+    </a>
+    <div class="nav-logo-box">
+      <span class="nav-collab-text">APEX <span>×</span> GHIDORAH</span>
+    </div>
+    <a href="#reserve" class="nav-cta">
+      <span>Reserve Unit</span>
+      <span class="btn-glow"></span>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>APEX × GHIDORAH &nbsp;—&nbsp;</span>
+        <span class="t-acc"> THREE STORMS &nbsp;—&nbsp;</span>
+        <span> 33 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> GRAVITATIONAL COLLAPSE &nbsp;—&nbsp;</span>
+        <span> RTX 5090 STORM EDITION &nbsp;—&nbsp;</span>
+        <span class="t-acc"> INTEL CORE ULTRA 9 &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+
+        <span>APEX × GHIDORAH &nbsp;—&nbsp;</span>
+        <span class="t-acc"> THREE STORMS &nbsp;—&nbsp;</span>
+        <span> 33 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> GRAVITATIONAL COLLAPSE &nbsp;—&nbsp;</span>
+        <span> RTX 5090 STORM EDITION &nbsp;—&nbsp;</span>
+        <span class="t-acc"> INTEL CORE ULTRA 9 &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <p class="section-label"><span></span>01 / Monsterverse × APEX — 2026</p>
+        <div class="hero-edition-badge">
+          <div class="dot"></div>
+          <span>Limited Edition — 33 Units Only</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-word">THREE</span>
+          <br />
+          <span class="highlight title-word">STORMS</span>
+        </h1>
+        <p class="hero-desc">
+          Three heads. One mind. Zero mercy. <strong>APEX × Ghidorah</strong> — a machine channelling the gravitational force of a cosmic destroyer. Triple-radiator loop. Lightning-gold ARGB. 33 units. Three storms descend.
+        </p>
+        <div class="unit-counter">
+          <div class="unit-item">
+            <div class="unit-value">33</div>
+            <div class="unit-label">Total Units</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value remaining" id="remaining-count">03</div>
+            <div class="unit-label">Still Available</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value secondary-accent">∞</div>
+            <div class="unit-label">No Restock</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value">48H</div>
+            <div class="unit-label">Build Time</div>
+          </div>
+        </div>
+        <div class="hero-action">
+          <a href="#reserve" class="cta primary">
+            <span>Reserve Your Unit</span>
+            <span class="btn-glow"></span>
+          </a>
+          <a href="#architecture" class="cta secondary">View Full Spec</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-frame">
+          <div class="visual-glow-ring"></div>
+          <img src="Resource/GHIDORAH/ghidorah-pc.png" alt="APEX Three Storms — Ghidorah Edition PC" class="hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER MARQUEE -->
+  <div class="divider-marquee" aria-hidden="true">
+    <div class="dm-track">
+      <span>GRAVITATIONAL FORCE</span><span class="dm-dot">◆</span>
+      <span>APEX × GHIDORAH</span><span class="dm-dot">◆</span>
+      <span>THREE STORMS PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>33 UNITS</span><span class="dm-dot">◆</span>
+      <span>LIGHTNING GOLD CORE</span><span class="dm-dot">◆</span>
+      <span>ZERO MERCY</span><span class="dm-dot">◆</span>
+      <span>GRAVITATIONAL FORCE</span><span class="dm-dot">◆</span>
+      <span>APEX × GHIDORAH</span><span class="dm-dot">◆</span>
+      <span>THREE STORMS PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>33 UNITS</span><span class="dm-dot">◆</span>
+      <span>LIGHTNING GOLD CORE</span><span class="dm-dot">◆</span>
+      <span>ZERO MERCY</span><span class="dm-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- COMPONENT INSPECTOR -->
+  <section class="core-architecture" id="architecture">
+    <div class="ca-header">
+      <div>
+        <p class="section-label"><span></span>02 / Core Architecture</p>
+        <h2 class="ca-title">Component <em>Inspector</em></h2>
+      </div>
+      <div class="ca-meta">
+        <span class="ca-meta-num">APEX × GHIDORAH — 2026</span>
+        <div class="ca-unit-badge">
+          <div class="ca-unit-pip"></div>
+          <span>Unit 31 / 33 — Available</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ca-body">
+      <nav class="ca-rail" id="caRail">
+        <div class="ca-rail-rule"></div>
+        <div class="ca-rail-item active" data-idx="0">
+          <span class="ca-rail-num">01</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Processor</span><span class="ca-rail-sub">Core Ultra 9 285HX</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="1">
+          <span class="ca-rail-num">02</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Graphics</span><span class="ca-rail-sub">RTX 5090 Storm Ed.</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="2">
+          <span class="ca-rail-num">03</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Motherboard</span><span class="ca-rail-sub">ROG Maximus Z890 Apex</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="3">
+          <span class="ca-rail-num">04</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Memory</span><span class="ca-rail-sub">96GB DDR5-8000</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="4">
+          <span class="ca-rail-num">05</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Cooling</span><span class="ca-rail-sub">Triple-Rad Loop</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+      </nav>
+
+      <div class="ca-stage">
+        <div class="ca-stage-atm"></div><div class="ca-grain"></div><div class="ca-grid-lines"></div>
+        <div class="ca-progress"><div class="ca-progress-track"></div><div class="ca-progress-fill" id="caProgFill"></div></div>
+
+        <div class="ca-panel active" data-idx="0">
+          <div class="ca-watermark">285HX</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GHIDORAH/cpu.png" alt="Intel Core Ultra 9 285HX" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 01 — Processor</div>
+            <div class="ca-info-name">Core Ultra 9<br/>285HX</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">24 cores — 8P+16E — 5.5 GHz boost. Intel's flagship desktop CPU with Arrow Lake architecture and an NPU for AI-accelerated workflows. Three heads, one relentless mind.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">LGA1851</span><span class="ca-spec-tag">24 Cores</span><span class="ca-spec-tag">5.5 GHz</span><span class="ca-spec-tag">PCIe 5.0</span><span class="ca-spec-tag hi">Integrated NPU</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="1">
+          <div class="ca-watermark">5090</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GHIDORAH/gpu.png" alt="RTX 5090 Ghidorah Storm Edition" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 02 — Graphics</div>
+            <div class="ca-info-name">RTX 5090<br/>Storm Ed.</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">32GB GDDR7. Triple-head Ghidorah shroud in electrum gold. Lightning-bolt heat-vent geometry. DLSS 4 Multi-Frame Generation. The storm made silicon.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">PCIe 5.0</span><span class="ca-spec-tag">21,760 CUDA</span><span class="ca-spec-tag">32GB GDDR7</span><span class="ca-spec-tag">DLSS 4</span><span class="ca-spec-tag hi">Gold Shroud</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="2">
+          <div class="ca-watermark">MAXIMUS</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GHIDORAH/mobo.png" alt="ROG Maximus Z890 Apex" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 03 — Motherboard</div>
+            <div class="ca-info-name">Maximus<br/>Z890 Apex</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">ROG's LGA1851 flagship. 24+2+2 power stages. Dual Thunderbolt 5, PCIe 5.0 M.2, WiFi 7 and a custom lightning-motif ARGB panel exclusive to this build.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">LGA1851</span><span class="ca-spec-tag">TB5</span><span class="ca-spec-tag">DDR5-8000+</span><span class="ca-spec-tag hi">Lightning Panel</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="3">
+          <div class="ca-watermark">96GB</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:420px;max-height:420px" src="Resource/GHIDORAH/ram.png" alt="G.Skill Trident Z5 RGB 96GB DDR5" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 04 — Memory</div>
+            <div class="ca-info-name">96GB<br/>DDR5-8000</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">G.Skill Trident Z5 RGB at 8000MHz CL38. Lightning-gold ARGB diffused across three sticks — one per head. 96GB total, XMP 3.0 plug-and-play.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">3×32GB</span><span class="ca-spec-tag">DDR5-8000</span><span class="ca-spec-tag">CL38</span><span class="ca-spec-tag">XMP 3.0</span><span class="ca-spec-tag hi">Lightning Gold</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="4">
+          <div class="ca-watermark">TRIPLE</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GHIDORAH/loop.png" alt="Triple Radiator Custom Loop" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 05 — Cooling</div>
+            <div class="ca-info-name">Triple-Rad<br/>Custom Loop</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">Three 360mm radiators — one per head. PETG hardline in storm gold with ionized translucent fluid. EK CPU and GPU blocks. Zero thermal throttle guaranteed.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">3× 360mm RAD</span><span class="ca-spec-tag">PETG Hardline</span><span class="ca-spec-tag">D5 Pump</span><span class="ca-spec-tag">EK GPU Block</span><span class="ca-spec-tag hi">Storm Gold Fluid</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-dots" id="caDots">
+          <div class="ca-dot active" data-idx="0"></div><div class="ca-dot" data-idx="1"></div><div class="ca-dot" data-idx="2"></div><div class="ca-dot" data-idx="3"></div><div class="ca-dot" data-idx="4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="perf-section reveal-fade">
+    <div class="perf-header">
+      <div class="section-tag"><div class="line"></div><span>03 / Performance Data</span></div>
+      <h2 class="perf-title">Three-Headed <em>Power.</em></h2>
+      <p class="perf-sub">4K native. Max settings. Stock clocks only. The storm doesn't need to overclock.</p>
+    </div>
+    <div class="perf-grid">
+      <div>
+        <h3 class="game-title">4K Gaming — Average FPS</h3>
+        <div class="fps-list">
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Cyberpunk 2077 — Path Tracing</span><span class="fps-val">178<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="89"></div></div><div class="fps-qual">4K · Path Tracing Ultra · DLSS Quality</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Microsoft Flight Sim 2024</span><span class="fps-val">139<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="70"></div></div><div class="fps-qual">4K · Ultra · DX12 Ultimate</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Alan Wake 2 — Full Path Tracing</span><span class="fps-val">152<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="76"></div></div><div class="fps-qual">4K · Max Ray Tracing · DLSS Balanced</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Counter-Strike 2</span><span class="fps-val">600+<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="100"></div></div><div class="fps-qual">1080p · Competitive · Native</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="game-title">System Benchmarks</h3>
+        <div class="stat-blocks">
+          <div class="stat-block hi"><div class="big-num">3,180<span class="big-unit"> pts</span></div><div class="big-label">Cinebench R24 Multi</div></div>
+          <div class="stat-block"><div class="big-num">24<span class="big-unit"> cores</span></div><div class="big-label">Core Ultra 9 285HX</div></div>
+          <div class="stat-block"><div class="big-num">96<span class="big-unit"> GB</span></div><div class="big-label">DDR5-8000 Memory</div></div>
+          <div class="stat-block hi"><div class="big-num">3×<span class="big-unit">360mm</span></div><div class="big-label">Radiator Coverage</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARSENAL -->
+  <section class="arsenal-section reveal-fade" id="arsenal">
+    <div class="arsenal-wrapper">
+      <div class="arsenal-left">
+        <h2 class="arsenal-title">Full<br/><span class="acc">Arsenal</span></h2>
+        <p class="arsenal-desc">Three threats. One chassis. Every component selected to channel the gravitational fury of a three-headed storm god.</p>
+        <div class="arsenal-badge"><div class="badge-num">33</div><div class="badge-text">Units<br/>Worldwide</div></div>
+        <ul class="arsenal-checklist">
+          <li><i class="fa-solid fa-check"></i> All Ghidorah-collab components sourced direct</li>
+          <li><i class="fa-solid fa-check"></i> 48-hour precision assembly window</li>
+          <li><i class="fa-solid fa-check"></i> Triple-rad loop leak-test &amp; 24hr burn-in</li>
+          <li><i class="fa-solid fa-check"></i> White-glove worldwide shipping</li>
+          <li><i class="fa-solid fa-check"></i> Numbered certificate of authenticity</li>
+          <li><i class="fa-solid fa-check"></i> 3-year APEX Storm warranty</li>
+        </ul>
+      </div>
+      <div class="arsenal-right">
+        <div class="arsenal-item"><div class="item-cat">CPU</div><div class="item-data"><h4 class="item-name">Intel Core Ultra 9 285HX</h4><p class="item-sub">24C / 32T — 5.5 GHz Boost — Arrow Lake — LGA1851</p><span class="item-tag tag-gold">FLAGSHIP</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">GPU</div><div class="item-data"><h4 class="item-name">ASUS ROG RTX 5090 Ghidorah Storm Edition</h4><p class="item-sub">32GB GDDR7 — 21,760 CUDA — DLSS 4 — Triple-Head Gold Shroud</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">MOBO</div><div class="item-data"><h4 class="item-name">ASUS ROG Maximus Z890 Apex Ghidorah Edition</h4><p class="item-sub">LGA1851 — PCIe 5.0 — Dual TB5 — WiFi 7 — Lightning ARGB Panel</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">RAM</div><div class="item-data"><h4 class="item-name">G.Skill Trident Z5 RGB 96GB DDR5-8000</h4><p class="item-sub">3×32GB — 8000 MHz — CL38 — XMP 3.0 — Lightning Gold ARGB</p><span class="item-tag tag-gold">PERFORMANCE</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">SSD</div><div class="item-data"><h4 class="item-name">WD Black SN850X 8TB NVMe (2× 4TB RAID 0)</h4><p class="item-sub">PCIe 4.0 ×4 — 7,300 MB/s Read — RAID 0 Striped</p><span class="item-tag tag-gold">8TB RAID</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">LOOP</div><div class="item-data"><h4 class="item-name">Custom PETG Triple-Rad Full-System Loop</h4><p class="item-sub">3× 360mm EK Radiators — D5 Pump — EK CPU + GPU Blocks — Storm Gold Fluid</p><span class="item-tag tag-accent">HANDBUILT</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">PSU</div><div class="item-data"><h4 class="item-name">be quiet! Dark Power Pro 13 1600W Titanium</h4><p class="item-sub">80+ Titanium — Fully Modular — Silent Wings Fans — Gold Rail</p><span class="item-tag tag-white">POWER</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">CASE</div><div class="item-data"><h4 class="item-name">Phanteks Enthoo Elite Ghidorah Edition</h4><p class="item-sub">Full Tower — Quad-Chamber — 3× Tempered Glass — Lightning Gold ARGB</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy-section reveal-fade">
+    <div class="philosophy-bg-text" aria-hidden="true">STORM</div>
+    <div class="philosophy-content">
+      <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="var(--char-primary)">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <h2 class="philosophy-text">Three minds. One directive. We didn't build a PC. We built a gravitational event — a machine so capable it bends the space around everything it competes against.</h2>
+      <p class="philosophy-author">— APEX Lead Systems Architect</p>
+    </div>
+  </section>
+
+  <!-- ALLOCATION TERMINAL -->
+  <section class="allocation-section" id="reserve">
+    <div class="terminal-container reveal-fade">
+      <div class="terminal-header">
+        <div class="term-status"><div class="pulse-dot"></div><span>STORM NETWORK SECURE // ENCRYPTED</span></div>
+        <h2 class="term-title">INITIATE <em>ALLOCATION</em></h2>
+        <p class="term-sub">Only 03 of 33 units remain. Enter your credentials to secure your build slot. A white-glove concierge will contact you within 2 hours.</p>
+      </div>
+      <form class="terminal-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-grid">
+          <div class="input-group"><label for="gh-name">Operative Name</label><input id="gh-name" type="text" placeholder="Full Name" required /></div>
+          <div class="input-group"><label for="gh-email">Secure Comms</label><input id="gh-email" type="email" placeholder="Email Address" required /></div>
+        </div>
+        <div class="input-group full-width"><label for="gh-region">Delivery Region</label><input id="gh-region" type="text" placeholder="Country / Region (Global Shipping Included)" required /></div>
+        <div class="terminal-footer">
+          <div class="price-lockup">
+            <span class="price-label">TOTAL ALLOCATION</span>
+            <span class="price-value">$32,000 <span class="currency">USD</span></span>
+          </div>
+          <button class="cta primary terminal-btn" type="submit">
+            <span>SECURE UNIT 31/33</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="apex-footer">
+    <div class="footer-closing reveal-fade">
+      <h2 class="closing-title">THREE HEADS.<br/><span class="accent-text">ONE STORM.</span></h2>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">APEX <span class="cross">×</span> GHIDORAH</div>
+      <div class="footer-links">
+        <a href="index.html">All Builds</a>
+        <a href="godzilla.html">Titan Protocol</a>
+        <a href="shimo.html">Absolute Zero</a>
+        <a href="kong.html">Hollow Earth</a>
+        <a href="miku.html">Project Miku</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer-copyright">
+        © 2026 APEX SYSTEMS. ALL RIGHTS RESERVED.<br/>
+        KING GHIDORAH TM &amp; © TOHO CO., LTD. MONSTERVERSE © LEGENDARY PICTURES.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="builds.js"></script>
+</body>
+</html>

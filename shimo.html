@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="APEX Absolute Zero — Shimo Edition. 24 units. Cryo-class precision." />
+  <title>APEX | Absolute Zero — Shimo</title>
+  <link rel="stylesheet" href="builds.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/5f6a32d955.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --char-primary:   #a8e6ff;
+      --char-secondary: #7b6fff;
+      --char-bg:        #020308;
+      --char-glow:      rgba(168, 230, 255, 0.4);
+      --char-dim:       rgba(168, 230, 255, 0.07);
+      --char-border:    rgba(168, 230, 255, 0.12);
+      --char-border-h:  rgba(168, 230, 255, 0.35);
+    }
+  </style>
+  <script>
+    window.BUILD_CONFIG = {
+      loaderStatuses: [
+        "INITIATING CRYO SEQUENCE...",
+        "DROPPING THERMAL BASELINE...",
+        "CRYSTALLIZING COOLANT...",
+        "REACHING ABSOLUTE ZERO...",
+        "SHIMO PROTOCOL ACTIVE."
+      ],
+      charColor: "#a8e6ff",
+      formSuccessColor: "#7b6fff",
+    };
+  </script>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">APEX <span>×</span> SHIMO</div>
+      <div class="loader-bar-track"><div class="loader-bar-fill" id="loaderBar"></div></div>
+      <div class="loader-status" id="loaderStatus">INITIATING CRYO SEQUENCE...</div>
+    </div>
+  </div>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <nav class="global-nav" id="globalNav">
+    <a href="index.html" class="home-link">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M8 3l-5 5 5 5"/></svg>
+      <span>Return to APEX</span>
+    </a>
+    <div class="nav-logo-box">
+      <span class="nav-collab-text">APEX <span>×</span> SHIMO</span>
+    </div>
+    <a href="#reserve" class="nav-cta">
+      <span>Reserve Unit</span>
+      <span class="btn-glow"></span>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>APEX × SHIMO &nbsp;—&nbsp;</span>
+        <span class="t-acc"> ABSOLUTE ZERO &nbsp;—&nbsp;</span>
+        <span> 24 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> CRYO PRECISION &nbsp;—&nbsp;</span>
+        <span> RTX 5080 FROST EDITION &nbsp;—&nbsp;</span>
+        <span class="t-acc"> RYZEN 9 9950X3D &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+
+        <span>APEX × SHIMO &nbsp;—&nbsp;</span>
+        <span class="t-acc"> ABSOLUTE ZERO &nbsp;—&nbsp;</span>
+        <span> 24 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> CRYO PRECISION &nbsp;—&nbsp;</span>
+        <span> RTX 5080 FROST EDITION &nbsp;—&nbsp;</span>
+        <span class="t-acc"> RYZEN 9 9950X3D &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <p class="section-label"><span></span>01 / Monsterverse × APEX — 2026</p>
+        <div class="hero-edition-badge">
+          <div class="dot"></div>
+          <span>Limited Edition — 24 Units Only</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-word">ABSOLUTE</span>
+          <br />
+          <span class="highlight title-word">ZERO</span>
+        </h1>
+        <p class="hero-desc">
+          The coldest force in the Monsterverse, crystallized in silicon. <strong>APEX × Shimo</strong> — an ice-white build engineered to reach temperatures that machines weren't supposed to survive. 24 units. One frost awakens.
+        </p>
+        <div class="unit-counter">
+          <div class="unit-item">
+            <div class="unit-value">24</div>
+            <div class="unit-label">Total Units</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value remaining" id="remaining-count">02</div>
+            <div class="unit-label">Still Available</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value secondary-accent">∞</div>
+            <div class="unit-label">No Restock</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value">48H</div>
+            <div class="unit-label">Build Time</div>
+          </div>
+        </div>
+        <div class="hero-action">
+          <a href="#reserve" class="cta primary">
+            <span>Reserve Your Unit</span>
+            <span class="btn-glow"></span>
+          </a>
+          <a href="#architecture" class="cta secondary">View Full Spec</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-frame">
+          <div class="visual-glow-ring"></div>
+          <img src="Resource/SHIMO/shimo-pc.png" alt="APEX Absolute Zero — Shimo Edition PC" class="hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER MARQUEE -->
+  <div class="divider-marquee" aria-hidden="true">
+    <div class="dm-track">
+      <span>CRYO PRECISION</span><span class="dm-dot">◆</span>
+      <span>APEX × SHIMO</span><span class="dm-dot">◆</span>
+      <span>ABSOLUTE ZERO PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>24 UNITS</span><span class="dm-dot">◆</span>
+      <span>ICE CRYSTAL CORE</span><span class="dm-dot">◆</span>
+      <span>FROST ETERNAL</span><span class="dm-dot">◆</span>
+      <span>CRYO PRECISION</span><span class="dm-dot">◆</span>
+      <span>APEX × SHIMO</span><span class="dm-dot">◆</span>
+      <span>ABSOLUTE ZERO PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>24 UNITS</span><span class="dm-dot">◆</span>
+      <span>ICE CRYSTAL CORE</span><span class="dm-dot">◆</span>
+      <span>FROST ETERNAL</span><span class="dm-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- COMPONENT INSPECTOR -->
+  <section class="core-architecture" id="architecture">
+    <div class="ca-header">
+      <div>
+        <p class="section-label"><span></span>02 / Core Architecture</p>
+        <h2 class="ca-title">Component <em>Inspector</em></h2>
+      </div>
+      <div class="ca-meta">
+        <span class="ca-meta-num">APEX × SHIMO — 2026</span>
+        <div class="ca-unit-badge">
+          <div class="ca-unit-pip"></div>
+          <span>Unit 23 / 24 — Available</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ca-body">
+      <nav class="ca-rail" id="caRail">
+        <div class="ca-rail-rule"></div>
+        <div class="ca-rail-item active" data-idx="0">
+          <span class="ca-rail-num">01</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Processor</span><span class="ca-rail-sub">Ryzen 9 9950X3D</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="1">
+          <span class="ca-rail-num">02</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Graphics</span><span class="ca-rail-sub">RTX 5080 Frost Ed.</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="2">
+          <span class="ca-rail-num">03</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Motherboard</span><span class="ca-rail-sub">ROG Strix X870E-F</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="3">
+          <span class="ca-rail-num">04</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Memory</span><span class="ca-rail-sub">64GB DDR5-7200</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="4">
+          <span class="ca-rail-num">05</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Cooling</span><span class="ca-rail-sub">Cryo Hardline Loop</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+      </nav>
+
+      <div class="ca-stage">
+        <div class="ca-stage-atm"></div><div class="ca-grain"></div><div class="ca-grid-lines"></div>
+        <div class="ca-progress"><div class="ca-progress-track"></div><div class="ca-progress-fill" id="caProgFill"></div></div>
+
+        <div class="ca-panel active" data-idx="0">
+          <div class="ca-watermark">9950X3D</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/SHIMO/cpu.png" alt="AMD Ryzen 9 9950X3D" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 01 — Processor</div>
+            <div class="ca-info-name">Ryzen 9<br/>9950X3D</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">16 cores of gaming-optimized precision. 144MB 3D V-Cache stacked for sub-zero latency. The ice beneath the surface — silent, relentless, and untouchably cold.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">AM5 Socket</span><span class="ca-spec-tag">16 Cores</span><span class="ca-spec-tag">5.7 GHz Boost</span><span class="ca-spec-tag hi">144MB 3D V-Cache</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="1">
+          <div class="ca-watermark">5080</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/SHIMO/gpu.png" alt="RTX 5080 Shimo Frost Edition" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 02 — Graphics</div>
+            <div class="ca-info-name">RTX 5080<br/>Frost Ed.</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">16GB GDDR7. Frost-crystal etched white shroud with ice-vein ARGB diffuser. DLSS 4 Multi-Frame Generation. Every pixel rendered at cryo precision.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">PCIe 5.0</span><span class="ca-spec-tag">10,752 CUDA</span><span class="ca-spec-tag">16GB GDDR7</span><span class="ca-spec-tag">DLSS 4</span><span class="ca-spec-tag hi">Crystal Shroud</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="2">
+          <div class="ca-watermark">X870E</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/SHIMO/mobo.png" alt="ROG Strix X870E-F Shimo Edition" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 03 — Motherboard</div>
+            <div class="ca-info-name">ROG Strix<br/>X870E-F</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">Frost-white PCB. AM5, PCIe 5.0, WiFi 7, Mura-free ARGB in ice blue. 20+2 VRM stages for sustained sub-zero operation. Every trace engineered for precision.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">AM5</span><span class="ca-spec-tag">PCIe 5.0</span><span class="ca-spec-tag">WiFi 7</span><span class="ca-spec-tag">20+2 VRM</span><span class="ca-spec-tag hi">Frost PCB</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="3">
+          <div class="ca-watermark">64GB</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:420px;max-height:420px" src="Resource/SHIMO/ram.png" alt="Kingston FURY Beast White 64GB DDR5" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 04 — Memory</div>
+            <div class="ca-info-name">64GB<br/>DDR5-7200</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">Kingston FURY Beast White 2×32GB at 7200MHz. Low-profile white diffuser with sub-zero ice ARGB. AMD EXPO precision tuning. Cold clarity at every clock cycle.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">2×32GB</span><span class="ca-spec-tag">DDR5-7200</span><span class="ca-spec-tag">CL36</span><span class="ca-spec-tag">AMD EXPO</span><span class="ca-spec-tag hi">Ice White</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="4">
+          <div class="ca-watermark">CRYO</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/SHIMO/loop.png" alt="Cryo Hardline Custom Loop" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 05 — Cooling</div>
+            <div class="ca-info-name">Cryo<br/>Hardline Loop</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">White PETG hardline with ultra-clear cryo fluid. 2× 360mm radiators. Frost-etched EK blocks. Sub-20°C delta T. Temperatures that machines were never supposed to reach.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">2× 360mm RAD</span><span class="ca-spec-tag">White PETG</span><span class="ca-spec-tag">D5 Pump</span><span class="ca-spec-tag">EK Blocks</span><span class="ca-spec-tag hi">Ultra-Clear Fluid</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-dots" id="caDots">
+          <div class="ca-dot active" data-idx="0"></div><div class="ca-dot" data-idx="1"></div><div class="ca-dot" data-idx="2"></div><div class="ca-dot" data-idx="3"></div><div class="ca-dot" data-idx="4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="perf-section reveal-fade">
+    <div class="perf-header">
+      <div class="section-tag"><div class="line"></div><span>03 / Performance Data</span></div>
+      <h2 class="perf-title">Cryo <em>Precision.</em></h2>
+      <p class="perf-sub">4K native. Max settings. Ice-cold operation confirmed. All figures at factory settings.</p>
+    </div>
+    <div class="perf-grid">
+      <div>
+        <h3 class="game-title">4K Gaming — Average FPS</h3>
+        <div class="fps-list">
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Cyberpunk 2077 — Path Tracing</span><span class="fps-val">164<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="82"></div></div><div class="fps-qual">4K · Path Tracing Ultra · DLSS Quality</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Hogwarts Legacy</span><span class="fps-val">148<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="74"></div></div><div class="fps-qual">4K · Ultra · Ray Tracing On</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Black Myth: Wukong</span><span class="fps-val">141<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="71"></div></div><div class="fps-qual">4K · Cinematic · DLSS Performance</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Counter-Strike 2</span><span class="fps-val">500+<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="100"></div></div><div class="fps-qual">1080p · Competitive · Native</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="game-title">Thermal Profile</h3>
+        <div class="stat-blocks">
+          <div class="stat-block hi"><div class="big-num">&lt;22°<span class="big-unit">C</span></div><div class="big-label">CPU Idle Temp</div></div>
+          <div class="stat-block"><div class="big-num">&lt;58°<span class="big-unit">C</span></div><div class="big-label">CPU Full Load</div></div>
+          <div class="stat-block"><div class="big-num">&lt;48°<span class="big-unit">C</span></div><div class="big-label">GPU Full Load</div></div>
+          <div class="stat-block hi"><div class="big-num">144<span class="big-unit">MB</span></div><div class="big-label">3D V-Cache Stack</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARSENAL -->
+  <section class="arsenal-section reveal-fade" id="arsenal">
+    <div class="arsenal-wrapper">
+      <div class="arsenal-left">
+        <h2 class="arsenal-title">Full<br/><span class="acc">Arsenal</span></h2>
+        <p class="arsenal-desc">Every component chosen for cryo precision. White. Cold. Calculated. Shimo's build endures where others melt.</p>
+        <div class="arsenal-badge"><div class="badge-num">24</div><div class="badge-text">Units<br/>Worldwide</div></div>
+        <ul class="arsenal-checklist">
+          <li><i class="fa-solid fa-check"></i> Full white Shimo collab components direct-sourced</li>
+          <li><i class="fa-solid fa-check"></i> 48-hour precision cryo-assembly window</li>
+          <li><i class="fa-solid fa-check"></i> Loop pressure-test &amp; 24hr cold-soak burn-in</li>
+          <li><i class="fa-solid fa-check"></i> White-glove worldwide shipping</li>
+          <li><i class="fa-solid fa-check"></i> Numbered certificate of authenticity</li>
+          <li><i class="fa-solid fa-check"></i> 3-year APEX Frost warranty</li>
+        </ul>
+      </div>
+      <div class="arsenal-right">
+        <div class="arsenal-item"><div class="item-cat">CPU</div><div class="item-data"><h4 class="item-name">AMD Ryzen 9 9950X3D</h4><p class="item-sub">16C / 32T — 5.7 GHz Boost — 144MB 3D V-Cache — AM5</p><span class="item-tag tag-gold">FLAGSHIP</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">GPU</div><div class="item-data"><h4 class="item-name">ASUS ROG RTX 5080 Shimo Frost Edition</h4><p class="item-sub">16GB GDDR7 — 10,752 CUDA — DLSS 4 — Ice Crystal White Shroud</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">MOBO</div><div class="item-data"><h4 class="item-name">ASUS ROG Strix X870E-F Shimo Edition</h4><p class="item-sub">AM5 — PCIe 5.0 — 20+2 VRM — WiFi 7 — Frost PCB — Ice ARGB</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">RAM</div><div class="item-data"><h4 class="item-name">Kingston FURY Beast White 64GB DDR5-7200</h4><p class="item-sub">2×32GB — 7200 MHz — CL36 — AMD EXPO — Ice White Low-Profile</p><span class="item-tag tag-gold">PERFORMANCE</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">SSD</div><div class="item-data"><h4 class="item-name">WD Black SN850X 8TB NVMe</h4><p class="item-sub">PCIe 4.0 ×4 — 7,300 MB/s Read — 7,000 MB/s Write — White Heatsink</p><span class="item-tag tag-gold">8TB CAPACITY</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">LOOP</div><div class="item-data"><h4 class="item-name">Custom White PETG Cryo Hardline Loop</h4><p class="item-sub">2× 360mm EK Radiators — D5 Pump — Frost EK Blocks — Ultra-Clear Fluid</p><span class="item-tag tag-accent">HANDBUILT</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">PSU</div><div class="item-data"><h4 class="item-name">Corsair HX1200i White 80+ Platinum</h4><p class="item-sub">Fully Modular — White Cables — Zero-RPM Silent Mode — 1200W</p><span class="item-tag tag-white">POWER</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">CASE</div><div class="item-data"><h4 class="item-name">Fractal Design Torrent White Shimo Edition</h4><p class="item-sub">Full Tower — Airflow Optimized — Tempered Glass — Ice Crystal Panel</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy-section reveal-fade">
+    <div class="philosophy-bg-text" aria-hidden="true">ZERO</div>
+    <div class="philosophy-content">
+      <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="var(--char-primary)">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <h2 class="philosophy-text">The coldest builds run the hottest workloads. We engineered a machine that doesn't just survive absolute zero — it thrives there, precisely and permanently.</h2>
+      <p class="philosophy-author">— APEX Lead Systems Architect</p>
+    </div>
+  </section>
+
+  <!-- ALLOCATION TERMINAL -->
+  <section class="allocation-section" id="reserve">
+    <div class="terminal-container reveal-fade">
+      <div class="terminal-header">
+        <div class="term-status"><div class="pulse-dot"></div><span>CRYO NETWORK SECURE // ENCRYPTED</span></div>
+        <h2 class="term-title">INITIATE <em>ALLOCATION</em></h2>
+        <p class="term-sub">Only 02 of 24 units remain. Enter your credentials to secure your build slot. A white-glove concierge will contact you within 2 hours.</p>
+      </div>
+      <form class="terminal-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-grid">
+          <div class="input-group"><label for="sh-name">Operative Name</label><input id="sh-name" type="text" placeholder="Full Name" required /></div>
+          <div class="input-group"><label for="sh-email">Secure Comms</label><input id="sh-email" type="email" placeholder="Email Address" required /></div>
+        </div>
+        <div class="input-group full-width"><label for="sh-region">Delivery Region</label><input id="sh-region" type="text" placeholder="Country / Region (Global Shipping Included)" required /></div>
+        <div class="terminal-footer">
+          <div class="price-lockup">
+            <span class="price-label">TOTAL ALLOCATION</span>
+            <span class="price-value">$22,000 <span class="currency">USD</span></span>
+          </div>
+          <button class="cta primary terminal-btn" type="submit">
+            <span>SECURE UNIT 23/24</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="apex-footer">
+    <div class="footer-closing reveal-fade">
+      <h2 class="closing-title">FROST HOLDS<br/><span class="accent-text">EVERYTHING.</span></h2>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">APEX <span class="cross">×</span> SHIMO</div>
+      <div class="footer-links">
+        <a href="index.html">All Builds</a>
+        <a href="godzilla.html">Titan Protocol</a>
+        <a href="ghidorah.html">Three Storms</a>
+        <a href="kong.html">Hollow Earth</a>
+        <a href="miku.html">Project Miku</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer-copyright">
+        © 2026 APEX SYSTEMS. ALL RIGHTS RESERVED.<br/>
+        SHIMO TM &amp; © LEGENDARY PICTURES. MONSTERVERSE © LEGENDARY PICTURES.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="builds.js"></script>
+</body>
+</html>

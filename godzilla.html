@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="APEX Titan Protocol — Godzilla Edition. 47 units. Nuclear-class compute." />
+  <title>APEX | Titan Protocol — Godzilla</title>
+  <link rel="stylesheet" href="builds.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/5f6a32d955.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --char-primary:   #1a6dff;
+      --char-secondary: #00cfff;
+      --char-bg:        #020409;
+      --char-glow:      rgba(26, 109, 255, 0.45);
+      --char-dim:       rgba(26, 109, 255, 0.09);
+      --char-border:    rgba(26, 109, 255, 0.14);
+      --char-border-h:  rgba(26, 109, 255, 0.38);
+    }
+  </style>
+  <script>
+    window.BUILD_CONFIG = {
+      loaderStatuses: [
+        "INITIALIZING TITAN CORE...",
+        "CALIBRATING NUCLEAR ARRAY...",
+        "ENGAGING ATOMIC LOOP...",
+        "SYNCHRONIZED WITH THE DEEP...",
+        "TITAN ONLINE."
+      ],
+      charColor: "#1a6dff",
+      formSuccessColor: "#1a6dff",
+    };
+  </script>
+</head>
+<body>
+
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">APEX <span>×</span> GODZILLA</div>
+      <div class="loader-bar-track"><div class="loader-bar-fill" id="loaderBar"></div></div>
+      <div class="loader-status" id="loaderStatus">INITIALIZING TITAN CORE...</div>
+    </div>
+  </div>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <nav class="global-nav" id="globalNav">
+    <a href="index.html" class="home-link">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 8H3M8 3l-5 5 5 5"/>
+      </svg>
+      <span>Return to APEX</span>
+    </a>
+    <div class="nav-logo-box">
+      <span class="nav-collab-text">APEX <span>×</span> GODZILLA</span>
+    </div>
+    <a href="#reserve" class="nav-cta">
+      <span>Reserve Unit</span>
+      <span class="btn-glow"></span>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>APEX × GODZILLA &nbsp;—&nbsp;</span>
+        <span class="t-acc"> TITAN PROTOCOL &nbsp;—&nbsp;</span>
+        <span> 47 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> NUCLEAR CORE ACTIVE &nbsp;—&nbsp;</span>
+        <span> RTX 5090 TITAN EDITION &nbsp;—&nbsp;</span>
+        <span class="t-acc"> THREADRIPPER 9990X &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+
+        <span>APEX × GODZILLA &nbsp;—&nbsp;</span>
+        <span class="t-acc"> TITAN PROTOCOL &nbsp;—&nbsp;</span>
+        <span> 47 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> NUCLEAR CORE ACTIVE &nbsp;—&nbsp;</span>
+        <span> RTX 5090 TITAN EDITION &nbsp;—&nbsp;</span>
+        <span class="t-acc"> THREADRIPPER 9990X &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <p class="section-label"><span></span>01 / Monsterverse × APEX — 2026</p>
+        <div class="hero-edition-badge">
+          <div class="dot"></div>
+          <span>Limited Edition — 47 Units Only</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-word">TITAN</span>
+          <br />
+          <span class="highlight title-word">PROTOCOL</span>
+        </h1>
+        <p class="hero-desc">
+          The alpha predator of custom builds. <strong>APEX × Godzilla</strong> — a machine forged from the legacy of a living nuclear reactor. Atomic-blue hardline loop. Dorsal-spine ARGB array. 47 units. The king claims dominance.
+        </p>
+        <div class="unit-counter">
+          <div class="unit-item">
+            <div class="unit-value">47</div>
+            <div class="unit-label">Total Units</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value remaining" id="remaining-count">04</div>
+            <div class="unit-label">Still Available</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value secondary-accent">∞</div>
+            <div class="unit-label">No Restock</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value">48H</div>
+            <div class="unit-label">Build Time</div>
+          </div>
+        </div>
+        <div class="hero-action">
+          <a href="#reserve" class="cta primary">
+            <span>Reserve Your Unit</span>
+            <span class="btn-glow"></span>
+          </a>
+          <a href="#architecture" class="cta secondary">View Full Spec</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-frame">
+          <div class="visual-glow-ring"></div>
+          <img src="Resource/GODZILLA/godzilla-pc.png" alt="APEX Titan Protocol — Godzilla Edition PC" class="hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER MARQUEE -->
+  <div class="divider-marquee" aria-hidden="true">
+    <div class="dm-track">
+      <span>NUCLEAR DOMINANCE</span><span class="dm-dot">◆</span>
+      <span>APEX × GODZILLA</span><span class="dm-dot">◆</span>
+      <span>ATOMIC BLUE CORE</span><span class="dm-dot">◆</span>
+      <span>47 UNITS</span><span class="dm-dot">◆</span>
+      <span>TITAN PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>THE KING CLAIMS ALL</span><span class="dm-dot">◆</span>
+      <span>NUCLEAR DOMINANCE</span><span class="dm-dot">◆</span>
+      <span>APEX × GODZILLA</span><span class="dm-dot">◆</span>
+      <span>ATOMIC BLUE CORE</span><span class="dm-dot">◆</span>
+      <span>47 UNITS</span><span class="dm-dot">◆</span>
+      <span>TITAN PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>THE KING CLAIMS ALL</span><span class="dm-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- COMPONENT INSPECTOR -->
+  <section class="core-architecture" id="architecture">
+    <div class="ca-header">
+      <div>
+        <p class="section-label"><span></span>02 / Core Architecture</p>
+        <h2 class="ca-title">Component <em>Inspector</em></h2>
+      </div>
+      <div class="ca-meta">
+        <span class="ca-meta-num">APEX × GODZILLA — 2026</span>
+        <div class="ca-unit-badge">
+          <div class="ca-unit-pip"></div>
+          <span>Unit 44 / 47 — Available</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ca-body">
+      <nav class="ca-rail" id="caRail">
+        <div class="ca-rail-rule"></div>
+        <div class="ca-rail-item active" data-idx="0">
+          <span class="ca-rail-num">01</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Processor</span><span class="ca-rail-sub">Threadripper 9990X</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="1">
+          <span class="ca-rail-num">02</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Graphics</span><span class="ca-rail-sub">RTX 5090 Titan Ed.</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="2">
+          <span class="ca-rail-num">03</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Motherboard</span><span class="ca-rail-sub">ROG Zenith X870E</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="3">
+          <span class="ca-rail-num">04</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Memory</span><span class="ca-rail-sub">128GB DDR5-7200</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="4">
+          <span class="ca-rail-num">05</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Cooling</span><span class="ca-rail-sub">Custom Hardline Loop</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+      </nav>
+
+      <div class="ca-stage">
+        <div class="ca-stage-atm"></div>
+        <div class="ca-grain"></div>
+        <div class="ca-grid-lines"></div>
+        <div class="ca-progress">
+          <div class="ca-progress-track"></div>
+          <div class="ca-progress-fill" id="caProgFill"></div>
+        </div>
+
+        <!-- Panel 0: CPU -->
+        <div class="ca-panel active" data-idx="0">
+          <div class="ca-watermark">9990X</div>
+          <div class="ca-visual">
+            <div class="ca-img-wrap">
+              <img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GODZILLA/cpu.png" alt="AMD Threadripper 9990X" />
+            </div>
+          </div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 01 — Processor</div>
+            <div class="ca-info-name">Threadripper<br/>9990X</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">64 cores of nuclear-grade compute. AMD's HEDT flagship with 256MB of total cache — the apex predator of any multithreaded workload on the planet.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">sTR5 Socket</span>
+              <span class="ca-spec-tag">64 Cores</span>
+              <span class="ca-spec-tag">128 Threads</span>
+              <span class="ca-spec-tag">5.5 GHz Boost</span>
+              <span class="ca-spec-tag hi">256MB Cache</span>
+            </div>
+            <div class="ca-info-cta">
+              <a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a>
+              <a href="#arsenal" class="cta secondary">Full Spec</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 1: GPU -->
+        <div class="ca-panel" data-idx="1">
+          <div class="ca-watermark">5090</div>
+          <div class="ca-visual">
+            <div class="ca-img-wrap">
+              <img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GODZILLA/gpu.png" alt="RTX 5090 Godzilla Titan Edition" />
+            </div>
+          </div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 02 — Graphics</div>
+            <div class="ca-info-name">RTX 5090<br/>Titan Ed.</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">32GB GDDR7. Dorsal-fin etched shroud. DLSS 4 Multi-Frame Generation. The only GPU that carries the Titan name without irony.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">PCIe 5.0</span>
+              <span class="ca-spec-tag">21,760 CUDA</span>
+              <span class="ca-spec-tag">32GB GDDR7</span>
+              <span class="ca-spec-tag">DLSS 4</span>
+              <span class="ca-spec-tag hi">Spine Shroud</span>
+            </div>
+            <div class="ca-info-cta">
+              <a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a>
+              <a href="#arsenal" class="cta secondary">Full Spec</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: MOBO -->
+        <div class="ca-panel" data-idx="2">
+          <div class="ca-watermark">ZENITH</div>
+          <div class="ca-visual">
+            <div class="ca-img-wrap">
+              <img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GODZILLA/mobo.png" alt="ROG Zenith X870E" />
+            </div>
+          </div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 03 — Motherboard</div>
+            <div class="ca-info-name">ROG Zenith<br/>X870E</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">HEDT-grade power delivery. 32+2 VRM stages. Quad M.2 PCIe 5.0, WiFi 7, 10G LAN. The only platform built to hold 64 cores without flinching.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">sTR5</span>
+              <span class="ca-spec-tag">4× M.2 PCIe 5</span>
+              <span class="ca-spec-tag">WiFi 7</span>
+              <span class="ca-spec-tag hi">OLED Display</span>
+            </div>
+            <div class="ca-info-cta">
+              <a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a>
+              <a href="#arsenal" class="cta secondary">Full Spec</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 3: RAM -->
+        <div class="ca-panel" data-idx="3">
+          <div class="ca-watermark">128GB</div>
+          <div class="ca-visual">
+            <div class="ca-img-wrap">
+              <img class="ca-comp-img" style="max-width:420px;max-height:420px" src="Resource/GODZILLA/ram.png" alt="Corsair Dominator 128GB DDR5" />
+            </div>
+          </div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 04 — Memory</div>
+            <div class="ca-info-name">128GB<br/>DDR5-7200</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">4×32GB Corsair Dominator Titanium at 7200MHz CL34. Atomic-blue ARGB synchronized to the dorsal lighting profile. No multitasking limit exists.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">4×32GB</span>
+              <span class="ca-spec-tag">DDR5-7200</span>
+              <span class="ca-spec-tag">CL34</span>
+              <span class="ca-spec-tag">XMP 3.0</span>
+              <span class="ca-spec-tag hi">Atomic Blue RGB</span>
+            </div>
+            <div class="ca-info-cta">
+              <a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a>
+              <a href="#arsenal" class="cta secondary">Full Spec</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 4: Loop -->
+        <div class="ca-panel" data-idx="4">
+          <div class="ca-watermark">LOOP</div>
+          <div class="ca-visual">
+            <div class="ca-img-wrap">
+              <img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/GODZILLA/loop.png" alt="Custom Hardline Cooling Loop" />
+            </div>
+          </div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 05 — Cooling</div>
+            <div class="ca-info-name">Custom<br/>Hardline Loop</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">PETG hardline in nuclear blue. Dual 360mm radiators. EK CPU and GPU blocks hand-etched with dorsal spine geometry. Sub-30°C idle. Sub-55°C load.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">2× 360mm RAD</span>
+              <span class="ca-spec-tag">PETG Hardline</span>
+              <span class="ca-spec-tag">D5 Pump</span>
+              <span class="ca-spec-tag">EK GPU Block</span>
+              <span class="ca-spec-tag hi">Atomic Blue Fluid</span>
+            </div>
+            <div class="ca-info-cta">
+              <a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a>
+              <a href="#arsenal" class="cta secondary">Full Spec</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ca-dots" id="caDots">
+          <div class="ca-dot active" data-idx="0"></div>
+          <div class="ca-dot" data-idx="1"></div>
+          <div class="ca-dot" data-idx="2"></div>
+          <div class="ca-dot" data-idx="3"></div>
+          <div class="ca-dot" data-idx="4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="perf-section reveal-fade">
+    <div class="perf-header">
+      <div class="section-tag"><div class="line"></div><span>03 / Performance Data</span></div>
+      <h2 class="perf-title">Nuclear <em>Output.</em></h2>
+      <p class="perf-sub">4K native. Max settings. Stock frequencies only. All benchmarks independently verified.</p>
+    </div>
+    <div class="perf-grid">
+      <div>
+        <h3 class="game-title">4K Gaming — Average FPS</h3>
+        <div class="fps-list">
+          <div class="fps-item">
+            <div class="fps-meta"><span class="fps-game">Cyberpunk 2077 — Path Tracing</span><span class="fps-val">186<span> fps</span></span></div>
+            <div class="fps-bar-bg"><div class="fps-bar" data-width="93"></div></div>
+            <div class="fps-qual">4K · Path Tracing Ultra · DLSS Quality</div>
+          </div>
+          <div class="fps-item">
+            <div class="fps-meta"><span class="fps-game">Microsoft Flight Sim 2024</span><span class="fps-val">145<span> fps</span></span></div>
+            <div class="fps-bar-bg"><div class="fps-bar" data-width="73"></div></div>
+            <div class="fps-qual">4K · Ultra · DX12 Ultimate</div>
+          </div>
+          <div class="fps-item">
+            <div class="fps-meta"><span class="fps-game">Black Myth: Wukong</span><span class="fps-val">162<span> fps</span></span></div>
+            <div class="fps-bar-bg"><div class="fps-bar" data-width="81"></div></div>
+            <div class="fps-qual">4K · Cinematic · DLSS Performance</div>
+          </div>
+          <div class="fps-item">
+            <div class="fps-meta"><span class="fps-game">Counter-Strike 2</span><span class="fps-val">600+<span> fps</span></span></div>
+            <div class="fps-bar-bg"><div class="fps-bar" data-width="100"></div></div>
+            <div class="fps-qual">1080p · Competitive · Native</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="game-title">System Benchmarks</h3>
+        <div class="stat-blocks">
+          <div class="stat-block hi"><div class="big-num">7,240<span class="big-unit"> pts</span></div><div class="big-label">Cinebench R24 Multi</div></div>
+          <div class="stat-block"><div class="big-num">64<span class="big-unit"> cores</span></div><div class="big-label">Threadripper 9990X</div></div>
+          <div class="stat-block"><div class="big-num">21.7<span class="big-unit">k</span></div><div class="big-label">CUDA Cores (5090)</div></div>
+          <div class="stat-block hi"><div class="big-num">128<span class="big-unit"> GB</span></div><div class="big-label">Total System Memory</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARSENAL -->
+  <section class="arsenal-section reveal-fade" id="arsenal">
+    <div class="arsenal-wrapper">
+      <div class="arsenal-left">
+        <h2 class="arsenal-title">Full<br/><span class="acc">Arsenal</span></h2>
+        <p class="arsenal-desc">Every component chosen for nuclear-grade dominance. Nothing overspecced. Nothing compromised. The Titan accepts no substitutes.</p>
+        <div class="arsenal-badge">
+          <div class="badge-num">47</div>
+          <div class="badge-text">Units<br/>Worldwide</div>
+        </div>
+        <ul class="arsenal-checklist">
+          <li><i class="fa-solid fa-check"></i> All Godzilla-collab components sourced direct</li>
+          <li><i class="fa-solid fa-check"></i> 48-hour precision assembly window</li>
+          <li><i class="fa-solid fa-check"></i> Full leak-test &amp; 24hr burn-in loop</li>
+          <li><i class="fa-solid fa-check"></i> White-glove worldwide shipping</li>
+          <li><i class="fa-solid fa-check"></i> Numbered certificate of authenticity</li>
+          <li><i class="fa-solid fa-check"></i> 3-year APEX Titan warranty</li>
+        </ul>
+      </div>
+      <div class="arsenal-right">
+        <div class="arsenal-item"><div class="item-cat">CPU</div><div class="item-data"><h4 class="item-name">AMD Threadripper 9990X</h4><p class="item-sub">64C / 128T — 5.5 GHz Boost — 256MB Cache — sTR5</p><span class="item-tag tag-gold">HEDT FLAGSHIP</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">GPU</div><div class="item-data"><h4 class="item-name">ASUS ROG RTX 5090 Godzilla Titan Edition</h4><p class="item-sub">32GB GDDR7 — 21,760 CUDA — DLSS 4 — Dorsal Spine Etched Shroud</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">MOBO</div><div class="item-data"><h4 class="item-name">ASUS ROG Zenith X870E-E Godzilla Edition</h4><p class="item-sub">sTR5 — PCIe 5.0 — 32+2 VRM — WiFi 7 — 10GbE — OLED Panel</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">RAM</div><div class="item-data"><h4 class="item-name">Corsair Dominator Titanium 128GB DDR5-7200</h4><p class="item-sub">4×32GB — 7200 MHz — CL34 — iCUE Atomic Blue ARGB</p><span class="item-tag tag-gold">PERFORMANCE</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">SSD</div><div class="item-data"><h4 class="item-name">Samsung 9100 Pro 16TB NVMe (2× 8TB RAID 0)</h4><p class="item-sub">PCIe 5.0 ×4 — 14,500 MB/s Read — RAID 0 Striped Array</p><span class="item-tag tag-gold">16TB RAID</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">LOOP</div><div class="item-data"><h4 class="item-name">Custom PETG Hardline Full-System Loop</h4><p class="item-sub">2× 360mm EK Radiators — D5 Pump — EK CPU + GPU Blocks — Atomic Blue</p><span class="item-tag tag-accent">HANDBUILT</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">PSU</div><div class="item-data"><h4 class="item-name">Seasonic PRIME TX-2000W Titanium</h4><p class="item-sub">80+ Titanium — Fully Modular — 2000W Rail Headroom</p><span class="item-tag tag-white">POWER</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">CASE</div><div class="item-data"><h4 class="item-name">Lian Li O11 Dynamic XL Godzilla Edition</h4><p class="item-sub">Full Tower — Dual Chamber — 3× Tempered Glass — Atomic Blue ARGB</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy-section reveal-fade">
+    <div class="philosophy-bg-text" aria-hidden="true">TITAN</div>
+    <div class="philosophy-content">
+      <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="var(--char-primary)">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <h2 class="philosophy-text">The king doesn't ask for permission. We built a machine that carries his legacy — nuclear, ancient, and completely unstoppable.</h2>
+      <p class="philosophy-author">— APEX Lead Systems Architect</p>
+    </div>
+  </section>
+
+  <!-- ALLOCATION TERMINAL -->
+  <section class="allocation-section" id="reserve">
+    <div class="terminal-container reveal-fade">
+      <div class="terminal-header">
+        <div class="term-status"><div class="pulse-dot"></div><span>TITAN NETWORK SECURE // ENCRYPTED</span></div>
+        <h2 class="term-title">INITIATE <em>ALLOCATION</em></h2>
+        <p class="term-sub">Only 04 of 47 units remain. Enter your credentials to secure your build slot. A white-glove concierge will contact you within 2 hours.</p>
+      </div>
+      <form class="terminal-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-grid">
+          <div class="input-group"><label for="gz-name">Operative Name</label><input id="gz-name" type="text" placeholder="Full Name" required /></div>
+          <div class="input-group"><label for="gz-email">Secure Comms</label><input id="gz-email" type="email" placeholder="Email Address" required /></div>
+        </div>
+        <div class="input-group full-width"><label for="gz-region">Delivery Region</label><input id="gz-region" type="text" placeholder="Country / Region (Global Shipping Included)" required /></div>
+        <div class="terminal-footer">
+          <div class="price-lockup">
+            <span class="price-label">TOTAL ALLOCATION</span>
+            <span class="price-value">$28,000 <span class="currency">USD</span></span>
+          </div>
+          <button class="cta primary terminal-btn" type="submit">
+            <span>SECURE UNIT 44/47</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="apex-footer">
+    <div class="footer-closing reveal-fade">
+      <h2 class="closing-title">THE KING<br/><span class="accent-text">NEVER FALLS.</span></h2>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">APEX <span class="cross">×</span> GODZILLA</div>
+      <div class="footer-links">
+        <a href="index.html">All Builds</a>
+        <a href="ghidorah.html">Three Storms</a>
+        <a href="shimo.html">Absolute Zero</a>
+        <a href="kong.html">Hollow Earth</a>
+        <a href="miku.html">Project Miku</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer-copyright">
+        © 2026 APEX SYSTEMS. ALL RIGHTS RESERVED.<br/>
+        GODZILLA TM &amp; © TOHO CO., LTD. MONSTERVERSE © LEGENDARY PICTURES.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="builds.js"></script>
+</body>
+</html>

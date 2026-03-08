@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="APEX Hollow Earth — Kong Edition. 55 units. Primal-class raw power." />
+  <title>APEX | Hollow Earth — Kong</title>
+  <link rel="stylesheet" href="builds.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/5f6a32d955.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --char-primary:   #d4820a;
+      --char-secondary: #39ff6e;
+      --char-bg:        #060401;
+      --char-glow:      rgba(212, 130, 10, 0.45);
+      --char-dim:       rgba(212, 130, 10, 0.08);
+      --char-border:    rgba(212, 130, 10, 0.13);
+      --char-border-h:  rgba(212, 130, 10, 0.38);
+    }
+    /* Bioluminescent secondary accent on value */
+    .unit-value.secondary-accent { color: #39ff6e; text-shadow: 0 0 20px rgba(57,255,110,0.5); }
+  </style>
+  <script>
+    window.BUILD_CONFIG = {
+      loaderStatuses: [
+        "DESCENDING INTO HOLLOW EARTH...",
+        "CALIBRATING PRIMAL ARRAY...",
+        "SYNCING BIOLUMINESCENT GRID...",
+        "RAW POWER INITIALIZING...",
+        "KONG ONLINE."
+      ],
+      charColor: "#d4820a",
+      formSuccessColor: "#39ff6e",
+    };
+  </script>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">APEX <span>×</span> KONG</div>
+      <div class="loader-bar-track"><div class="loader-bar-fill" id="loaderBar"></div></div>
+      <div class="loader-status" id="loaderStatus">DESCENDING INTO HOLLOW EARTH...</div>
+    </div>
+  </div>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <nav class="global-nav" id="globalNav">
+    <a href="index.html" class="home-link">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M8 3l-5 5 5 5"/></svg>
+      <span>Return to APEX</span>
+    </a>
+    <div class="nav-logo-box">
+      <span class="nav-collab-text">APEX <span>×</span> KONG</span>
+    </div>
+    <a href="#reserve" class="nav-cta">
+      <span>Reserve Unit</span>
+      <span class="btn-glow"></span>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="hero-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>APEX × KONG &nbsp;—&nbsp;</span>
+        <span class="t-acc"> HOLLOW EARTH &nbsp;—&nbsp;</span>
+        <span> 55 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> PRIMAL RAW POWER &nbsp;—&nbsp;</span>
+        <span> RTX 5080 HOLLOW EARTH ED. &nbsp;—&nbsp;</span>
+        <span class="t-acc"> RYZEN 9 9950X3D &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+
+        <span>APEX × KONG &nbsp;—&nbsp;</span>
+        <span class="t-acc"> HOLLOW EARTH &nbsp;—&nbsp;</span>
+        <span> 55 UNITS ONLY &nbsp;—&nbsp;</span>
+        <span class="t-acc"> PRIMAL RAW POWER &nbsp;—&nbsp;</span>
+        <span> RTX 5080 HOLLOW EARTH ED. &nbsp;—&nbsp;</span>
+        <span class="t-acc"> RYZEN 9 9950X3D &nbsp;—&nbsp;</span>
+        <span> NO RESTOCK. EVER. &nbsp;—&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <p class="section-label"><span></span>01 / Monsterverse × APEX — 2026</p>
+        <div class="hero-edition-badge">
+          <div class="dot"></div>
+          <span>Limited Edition — 55 Units Only</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-word">HOLLOW</span>
+          <br />
+          <span class="highlight title-word">EARTH</span>
+        </h1>
+        <p class="hero-desc">
+          Ancient. Primal. Sovereign. <strong>APEX × Kong</strong> — forged from the raw materials of Hollow Earth. Copper-vein hardline. Bioluminescent green ARGB. 55 units. The true king's domain awaits.
+        </p>
+        <div class="unit-counter">
+          <div class="unit-item">
+            <div class="unit-value">55</div>
+            <div class="unit-label">Total Units</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value remaining" id="remaining-count">06</div>
+            <div class="unit-label">Still Available</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value secondary-accent">∞</div>
+            <div class="unit-label">No Restock</div>
+          </div>
+          <div class="unit-sep"></div>
+          <div class="unit-item">
+            <div class="unit-value">48H</div>
+            <div class="unit-label">Build Time</div>
+          </div>
+        </div>
+        <div class="hero-action">
+          <a href="#reserve" class="cta primary">
+            <span>Reserve Your Unit</span>
+            <span class="btn-glow"></span>
+          </a>
+          <a href="#architecture" class="cta secondary">View Full Spec</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-visual-frame">
+          <div class="visual-glow-ring"></div>
+          <img src="Resource/KONG/kong-pc.png" alt="APEX Hollow Earth — Kong Edition PC" class="hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER MARQUEE -->
+  <div class="divider-marquee" aria-hidden="true">
+    <div class="dm-track">
+      <span>PRIMAL DOMINION</span><span class="dm-dot">◆</span>
+      <span>APEX × KONG</span><span class="dm-dot">◆</span>
+      <span>HOLLOW EARTH PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>55 UNITS</span><span class="dm-dot">◆</span>
+      <span>COPPER VEIN CORE</span><span class="dm-dot">◆</span>
+      <span>RAW AND SOVEREIGN</span><span class="dm-dot">◆</span>
+      <span>PRIMAL DOMINION</span><span class="dm-dot">◆</span>
+      <span>APEX × KONG</span><span class="dm-dot">◆</span>
+      <span>HOLLOW EARTH PROTOCOL</span><span class="dm-dot">◆</span>
+      <span>55 UNITS</span><span class="dm-dot">◆</span>
+      <span>COPPER VEIN CORE</span><span class="dm-dot">◆</span>
+      <span>RAW AND SOVEREIGN</span><span class="dm-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- COMPONENT INSPECTOR -->
+  <section class="core-architecture" id="architecture">
+    <div class="ca-header">
+      <div>
+        <p class="section-label"><span></span>02 / Core Architecture</p>
+        <h2 class="ca-title">Component <em>Inspector</em></h2>
+      </div>
+      <div class="ca-meta">
+        <span class="ca-meta-num">APEX × KONG — 2026</span>
+        <div class="ca-unit-badge">
+          <div class="ca-unit-pip"></div>
+          <span>Unit 50 / 55 — Available</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ca-body">
+      <nav class="ca-rail" id="caRail">
+        <div class="ca-rail-rule"></div>
+        <div class="ca-rail-item active" data-idx="0">
+          <span class="ca-rail-num">01</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Processor</span><span class="ca-rail-sub">Ryzen 9 9950X3D</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="1">
+          <span class="ca-rail-num">02</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Graphics</span><span class="ca-rail-sub">RTX 5080 Hollow Ed.</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="2">
+          <span class="ca-rail-num">03</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Motherboard</span><span class="ca-rail-sub">ROG Crosshair X870E</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="3">
+          <span class="ca-rail-num">04</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Memory</span><span class="ca-rail-sub">64GB DDR5-6800</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+        <div class="ca-rail-item" data-idx="4">
+          <span class="ca-rail-num">05</span>
+          <div class="ca-rail-info"><span class="ca-rail-name">Cooling</span><span class="ca-rail-sub">Copper-Vein Loop</span></div>
+          <div class="ca-rail-arrow"><svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div>
+          <div class="ca-rail-bar"></div>
+        </div>
+      </nav>
+
+      <div class="ca-stage">
+        <div class="ca-stage-atm"></div><div class="ca-grain"></div><div class="ca-grid-lines"></div>
+        <div class="ca-progress"><div class="ca-progress-track"></div><div class="ca-progress-fill" id="caProgFill"></div></div>
+
+        <div class="ca-panel active" data-idx="0">
+          <div class="ca-watermark">9950X3D</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/KONG/cpu.png" alt="AMD Ryzen 9 9950X3D" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 01 — Processor</div>
+            <div class="ca-info-name">Ryzen 9<br/>9950X3D</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">16 cores of gaming-first compute. 144MB stacked 3D V-Cache built for primal single-threaded dominance. Ancient architecture — relentlessly modern execution.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">AM5 Socket</span><span class="ca-spec-tag">16 Cores</span><span class="ca-spec-tag">5.7 GHz Boost</span><span class="ca-spec-tag">AMD EXPO</span><span class="ca-spec-tag hi">144MB 3D V-Cache</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="1">
+          <div class="ca-watermark">5080</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/KONG/gpu.png" alt="RTX 5080 Hollow Earth Edition" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 02 — Graphics</div>
+            <div class="ca-info-name">RTX 5080<br/>Hollow Ed.</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">16GB GDDR7. Hollow Earth fossil-engraved shroud with bioluminescent green ARGB accents. DLSS 4 Multi-Frame Generation. The ancient terrain mapped in real-time ray tracing.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">PCIe 5.0</span><span class="ca-spec-tag">10,752 CUDA</span><span class="ca-spec-tag">16GB GDDR7</span><span class="ca-spec-tag">DLSS 4</span><span class="ca-spec-tag hi">Fossil Shroud</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="2">
+          <div class="ca-watermark">X870E</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/KONG/mobo.png" alt="ROG Crosshair X870E Hollow Earth Edition" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 03 — Motherboard</div>
+            <div class="ca-info-name">Crosshair<br/>X870E</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">ROG's AM5 apex. 26+2 power stages, PCIe 5.0 M.2, WiFi 7, 10GbE LAN. Hollow Earth terrain topology etched into the heatsink shroud. Raw infrastructure for a primal king.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">AM5</span><span class="ca-spec-tag">PCIe 5.0</span><span class="ca-spec-tag">26+2 VRM</span><span class="ca-spec-tag">WiFi 7</span><span class="ca-spec-tag hi">Terrain Shroud</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="3">
+          <div class="ca-watermark">64GB</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:420px;max-height:420px" src="Resource/KONG/ram.png" alt="Corsair Vengeance RGB 64GB DDR5 Bronze" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 04 — Memory</div>
+            <div class="ca-info-name">64GB<br/>DDR5-6800</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">Corsair Vengeance RGB 2×32GB at 6800MHz CL34. Amber-bronze heatspreader with bioluminescent green ARGB fade. AMD EXPO tuned from the factory. No capacity limit. No compromise.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">2×32GB</span><span class="ca-spec-tag">DDR5-6800</span><span class="ca-spec-tag">CL34</span><span class="ca-spec-tag">AMD EXPO</span><span class="ca-spec-tag hi">Amber Bronze RGB</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-panel" data-idx="4">
+          <div class="ca-watermark">VEIN</div>
+          <div class="ca-visual"><div class="ca-img-wrap"><img class="ca-comp-img" style="max-width:440px;max-height:440px" src="Resource/KONG/loop.png" alt="Copper-Vein Custom Loop" /></div></div>
+          <div class="ca-info">
+            <div class="ca-info-tag"><div class="ca-info-pip"></div>Component 05 — Cooling</div>
+            <div class="ca-info-name">Copper-Vein<br/>Hardline Loop</div>
+            <span class="ca-info-rule"></span>
+            <p class="ca-info-desc">Copper PETG hardline. Hollow Earth amber-tinted coolant. 2× 360mm radiators with bioluminescent green trim fans. EK copper-finish CPU and GPU blocks. Primal infrastructure.</p>
+            <div class="ca-info-specs">
+              <span class="ca-spec-tag">2× 360mm RAD</span><span class="ca-spec-tag">Copper PETG</span><span class="ca-spec-tag">D5 Pump</span><span class="ca-spec-tag">EK Copper Blocks</span><span class="ca-spec-tag hi">Amber Coolant</span>
+            </div>
+            <div class="ca-info-cta"><a href="#reserve" class="cta primary"><span>Reserve</span><span class="btn-glow"></span></a><a href="#arsenal" class="cta secondary">Full Spec</a></div>
+          </div>
+        </div>
+
+        <div class="ca-dots" id="caDots">
+          <div class="ca-dot active" data-idx="0"></div><div class="ca-dot" data-idx="1"></div><div class="ca-dot" data-idx="2"></div><div class="ca-dot" data-idx="3"></div><div class="ca-dot" data-idx="4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFORMANCE -->
+  <section class="perf-section reveal-fade">
+    <div class="perf-header">
+      <div class="section-tag"><div class="line"></div><span>03 / Performance Data</span></div>
+      <h2 class="perf-title">Primal <em>Output.</em></h2>
+      <p class="perf-sub">4K native. Max settings. Raw and unfiltered. From the depths of Hollow Earth.</p>
+    </div>
+    <div class="perf-grid">
+      <div>
+        <h3 class="game-title">4K Gaming — Average FPS</h3>
+        <div class="fps-list">
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Cyberpunk 2077 — Path Tracing</span><span class="fps-val">158<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="79"></div></div><div class="fps-qual">4K · Path Tracing Ultra · DLSS Quality</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Black Myth: Wukong</span><span class="fps-val">146<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="73"></div></div><div class="fps-qual">4K · Cinematic · DLSS Performance</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Elden Ring — Shadow of the Erdtree</span><span class="fps-val">240<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="100"></div></div><div class="fps-qual">4K · Max Settings · Native</div></div>
+          <div class="fps-item"><div class="fps-meta"><span class="fps-game">Counter-Strike 2</span><span class="fps-val">500+<span> fps</span></span></div><div class="fps-bar-bg"><div class="fps-bar" data-width="100"></div></div><div class="fps-qual">1080p · Competitive · Native</div></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="game-title">System Benchmarks</h3>
+        <div class="stat-blocks">
+          <div class="stat-block hi"><div class="big-num">2,880<span class="big-unit"> pts</span></div><div class="big-label">Cinebench R24 Multi</div></div>
+          <div class="stat-block"><div class="big-num">144<span class="big-unit">MB</span></div><div class="big-label">3D V-Cache Stack</div></div>
+          <div class="stat-block"><div class="big-num">64<span class="big-unit"> GB</span></div><div class="big-label">DDR5-6800 Memory</div></div>
+          <div class="stat-block hi"><div class="big-num">2×<span class="big-unit">360mm</span></div><div class="big-label">Copper Radiators</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARSENAL -->
+  <section class="arsenal-section reveal-fade" id="arsenal">
+    <div class="arsenal-wrapper">
+      <div class="arsenal-left">
+        <h2 class="arsenal-title">Full<br/><span class="acc">Arsenal</span></h2>
+        <p class="arsenal-desc">Primal materials. Ancient instincts. Each component chosen to channel the sovereign force of the undisputed ruler of Hollow Earth.</p>
+        <div class="arsenal-badge"><div class="badge-num">55</div><div class="badge-text">Units<br/>Worldwide</div></div>
+        <ul class="arsenal-checklist">
+          <li><i class="fa-solid fa-check"></i> All Kong-collab components sourced direct</li>
+          <li><i class="fa-solid fa-check"></i> 48-hour precision assembly window</li>
+          <li><i class="fa-solid fa-check"></i> Copper loop leak-test &amp; 24hr burn-in</li>
+          <li><i class="fa-solid fa-check"></i> White-glove worldwide shipping</li>
+          <li><i class="fa-solid fa-check"></i> Numbered certificate of authenticity</li>
+          <li><i class="fa-solid fa-check"></i> 3-year APEX Sovereign warranty</li>
+        </ul>
+      </div>
+      <div class="arsenal-right">
+        <div class="arsenal-item"><div class="item-cat">CPU</div><div class="item-data"><h4 class="item-name">AMD Ryzen 9 9950X3D</h4><p class="item-sub">16C / 32T — 5.7 GHz Boost — 144MB 3D V-Cache — AM5</p><span class="item-tag tag-gold">FLAGSHIP</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">GPU</div><div class="item-data"><h4 class="item-name">ASUS ROG RTX 5080 Kong Hollow Earth Edition</h4><p class="item-sub">16GB GDDR7 — 10,752 CUDA — DLSS 4 — Fossil Terrain Engraved Shroud</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">MOBO</div><div class="item-data"><h4 class="item-name">ASUS ROG Crosshair X870E Hollow Earth Edition</h4><p class="item-sub">AM5 — PCIe 5.0 — 26+2 VRM — WiFi 7 — 10GbE — Terrain Shroud</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">RAM</div><div class="item-data"><h4 class="item-name">Corsair Vengeance RGB 64GB DDR5-6800</h4><p class="item-sub">2×32GB — 6800 MHz — CL34 — AMD EXPO — Amber Bronze ARGB</p><span class="item-tag tag-gold">PERFORMANCE</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">SSD</div><div class="item-data"><h4 class="item-name">Seagate FireCuda 530 8TB NVMe</h4><p class="item-sub">PCIe 4.0 ×4 — 7,300 MB/s Read — Copper-Finish Heatsink</p><span class="item-tag tag-gold">8TB CAPACITY</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">LOOP</div><div class="item-data"><h4 class="item-name">Custom Copper PETG Hollow Earth Loop</h4><p class="item-sub">2× 360mm EK Radiators — D5 Pump — EK Copper CPU + GPU Blocks — Amber Fluid</p><span class="item-tag tag-accent">HANDBUILT</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">PSU</div><div class="item-data"><h4 class="item-name">Fractal Design Ion+ 2 1200W Platinum</h4><p class="item-sub">80+ Platinum — Fully Modular — Silent Operation — Copper-Toned Finish</p><span class="item-tag tag-white">POWER</span></div></div>
+        <div class="arsenal-item"><div class="item-cat">CASE</div><div class="item-data"><h4 class="item-name">Lian Li O11 Dynamic EVO Kong Edition</h4><p class="item-sub">Mid-Full Tower — Hollow Earth Amber — Bioluminescent Green ARGB — Tempered Glass</p><span class="item-tag tag-accent">COLLAB</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy-section reveal-fade">
+    <div class="philosophy-bg-text" aria-hidden="true">KONG</div>
+    <div class="philosophy-content">
+      <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="var(--char-primary)">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <h2 class="philosophy-text">Raw power isn't loud. It's inevitable. We built a machine from the materials of a world that was here before ours — and will be standing after everything else falls.</h2>
+      <p class="philosophy-author">— APEX Lead Systems Architect</p>
+    </div>
+  </section>
+
+  <!-- ALLOCATION TERMINAL -->
+  <section class="allocation-section" id="reserve">
+    <div class="terminal-container reveal-fade">
+      <div class="terminal-header">
+        <div class="term-status"><div class="pulse-dot"></div><span>HOLLOW EARTH NETWORK SECURE // ENCRYPTED</span></div>
+        <h2 class="term-title">INITIATE <em>ALLOCATION</em></h2>
+        <p class="term-sub">Only 06 of 55 units remain. Enter your credentials to secure your build slot. A white-glove concierge will contact you within 2 hours.</p>
+      </div>
+      <form class="terminal-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-grid">
+          <div class="input-group"><label for="kg-name">Operative Name</label><input id="kg-name" type="text" placeholder="Full Name" required /></div>
+          <div class="input-group"><label for="kg-email">Secure Comms</label><input id="kg-email" type="email" placeholder="Email Address" required /></div>
+        </div>
+        <div class="input-group full-width"><label for="kg-region">Delivery Region</label><input id="kg-region" type="text" placeholder="Country / Region (Global Shipping Included)" required /></div>
+        <div class="terminal-footer">
+          <div class="price-lockup">
+            <span class="price-label">TOTAL ALLOCATION</span>
+            <span class="price-value">$19,500 <span class="currency">USD</span></span>
+          </div>
+          <button class="cta primary terminal-btn" type="submit">
+            <span>SECURE UNIT 50/55</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="apex-footer">
+    <div class="footer-closing reveal-fade">
+      <h2 class="closing-title">THE DOMAIN<br/><span class="accent-text">IS ETERNAL.</span></h2>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">APEX <span class="cross">×</span> KONG</div>
+      <div class="footer-links">
+        <a href="index.html">All Builds</a>
+        <a href="godzilla.html">Titan Protocol</a>
+        <a href="ghidorah.html">Three Storms</a>
+        <a href="shimo.html">Absolute Zero</a>
+        <a href="miku.html">Project Miku</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer-copyright">
+        © 2026 APEX SYSTEMS. ALL RIGHTS RESERVED.<br/>
+        KONG TM &amp; © LEGENDARY PICTURES. MONSTERVERSE © LEGENDARY PICTURES.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="builds.js"></script>
+</body>
+</html>
