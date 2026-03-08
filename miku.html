@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="APEX Project: Miku. Official Collaboration. 39 Units Only."
+    />
+    <title>APEX | Project: Miku</title>
+    <link rel="stylesheet" href="miku.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5f6a32d955.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-inner">
+        <div class="loader-logo">APEX <span>×</span> MIKU</div>
+        <div class="loader-bar-track">
+          <div class="loader-bar-fill" id="loaderBar"></div>
+        </div>
+        <div class="loader-status" id="loaderStatus">
+          INITIALIZING SYSTEM...
+        </div>
+      </div>
+    </div>
+
+    <!-- SCAN LINE OVERLAY -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAV -->
+    <nav class="global-nav" id="globalNav">
+      <a href="index.html" class="home-link">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M13 8H3M8 3l-5 5 5 5" />
+        </svg>
+        Return to APEX
+      </a>
+      <div class="nav-logo-box">
+        <img
+          src="Resource/MIKU/rogxmiku.png"
+          alt="APEX × Miku Collaboration"
+          class="nav-logo"
+        />
+      </div>
+      <a href="#reserve" class="initiate-build">
+        <span class="btn-text">Initiate Build</span>
+        <span class="btn-glow"></span>
+      </a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span
+            >APEX × HATSUNE MIKU &nbsp;—&nbsp; 39 UNITS ONLY &nbsp;—&nbsp; NO
+            RESTOCK. EVER. &nbsp;—&nbsp; TEAL HARDLINE LOOP &nbsp;—&nbsp; RTX
+            5080 MIKU EDITION &nbsp;—&nbsp; RYZEN 9 9950X3D &nbsp;—&nbsp; 48H
+            BUILD TIME &nbsp;—&nbsp;</span
+          >
+          <span aria-hidden="true"
+            >APEX × HATSUNE MIKU &nbsp;—&nbsp; 39 UNITS ONLY &nbsp;—&nbsp; NO
+            RESTOCK. EVER. &nbsp;—&nbsp; TEAL HARDLINE LOOP &nbsp;—&nbsp; RTX
+            5080 MIKU EDITION &nbsp;—&nbsp; RYZEN 9 9950X3D &nbsp;—&nbsp; 48H
+            BUILD TIME &nbsp;—&nbsp;</span
+          >
+        </div>
+      </div>
+
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <p class="section-label hero-label">
+            <span></span>01 / Official Collaboration — 2026
+          </p>
+          <div class="hero-edition-badge">
+            <div class="dot"></div>
+            <span>Limited Edition — 39 Units Only</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="title-word">PROJECT:</span>
+            <br />
+            <span class="highlight title-word">MIKU</span>
+          </h1>
+          <p class="hero-desc">
+            The convergence of synthetic music and raw compute.
+            <strong>APEX × Hatsune Miku</strong> — the world's most limited,
+            most meticulously crafted gaming PC. Teal hardline loop.
+            Miku-signature RGB. 39 units. No restock. Ever.
+          </p>
+          <div class="unit-counter">
+            <div class="unit-item">
+              <div class="unit-value">39</div>
+              <div class="unit-label">Total Units</div>
+            </div>
+            <div class="unit-sep"></div>
+            <div class="unit-item">
+              <div class="unit-value remaining" id="remaining-count">03</div>
+              <div class="unit-label">Still Available</div>
+            </div>
+            <div class="unit-sep"></div>
+            <div class="unit-item">
+              <div class="unit-value magenta">∞</div>
+              <div class="unit-label">No Restock</div>
+            </div>
+            <div class="unit-sep"></div>
+            <div class="unit-item">
+              <div class="unit-value">48H</div>
+              <div class="unit-label">Build Time</div>
+            </div>
+          </div>
+          <div class="hero-action">
+            <a href="#reserve" class="cta primary">
+              <span>Reserve Your Unit</span>
+              <span class="btn-glow"></span>
+            </a>
+            <a href="#architecture" class="cta secondary">View Full Spec</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-frame">
+            <div class="visual-glow-ring"></div>
+            <img
+              src="Resource/MIKU/miku.png"
+              alt="APEX × Miku Limited Edition PC"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER MARQUEE -->
+    <div class="divider-marquee" aria-hidden="true">
+      <div class="dm-track">
+        <span>SYNTHETIC SOUL</span><span class="dm-dot">◆</span>
+        <span>RAW COMPUTE</span><span class="dm-dot">◆</span>
+        <span>APEX × MIKU</span><span class="dm-dot">◆</span>
+        <span>39 UNITS</span><span class="dm-dot">◆</span>
+        <span>SYNTHETIC SOUL</span><span class="dm-dot">◆</span>
+        <span>RAW COMPUTE</span><span class="dm-dot">◆</span>
+        <span>APEX × MIKU</span><span class="dm-dot">◆</span>
+        <span>39 UNITS</span><span class="dm-dot">◆</span>
+        <span>SYNTHETIC SOUL</span><span class="dm-dot">◆</span>
+        <span>RAW COMPUTE</span><span class="dm-dot">◆</span>
+        <span>APEX × MIKU</span><span class="dm-dot">◆</span>
+        <span>39 UNITS</span><span class="dm-dot">◆</span>
+      </div>
+    </div>
+
+    <!-- CORE ARCHITECTURE -->
+    <section class="core-architecture" id="architecture">
+      <div class="ca-header">
+        <div>
+          <p class="section-label"><span></span>02 / Core Architecture</p>
+          <h2 class="ca-title">Component <em>Inspector</em></h2>
+        </div>
+        <div class="ca-meta">
+          <span class="ca-meta-num">APEX × MIKU — 2026</span>
+          <div class="ca-unit-badge">
+            <div class="ca-unit-pip"></div>
+            <span>Unit 37 / 39 — Available</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ca-body">
+        <nav class="ca-rail" id="caRail">
+          <div class="ca-rail-rule"></div>
+          <div class="ca-rail-item active" data-idx="0">
+            <span class="ca-rail-num">01</span>
+            <div class="ca-rail-info">
+              <span class="ca-rail-name">Processor</span
+              ><span class="ca-rail-sub">Ryzen 9 9950X3D</span>
+            </div>
+            <div class="ca-rail-arrow">
+              <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5" /></svg>
+            </div>
+            <div class="ca-rail-bar"></div>
+          </div>
+          <div class="ca-rail-item" data-idx="1">
+            <span class="ca-rail-num">02</span>
+            <div class="ca-rail-info">
+              <span class="ca-rail-name">Graphics</span
+              ><span class="ca-rail-sub">RTX 5080 Miku Ed.</span>
+            </div>
+            <div class="ca-rail-arrow">
+              <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5" /></svg>
+            </div>
+            <div class="ca-rail-bar"></div>
+          </div>
+          <div class="ca-rail-item" data-idx="2">
+            <span class="ca-rail-num">03</span>
+            <div class="ca-rail-info">
+              <span class="ca-rail-name">Motherboard</span
+              ><span class="ca-rail-sub">ROG X870E Miku Ed.</span>
+            </div>
+            <div class="ca-rail-arrow">
+              <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5" /></svg>
+            </div>
+            <div class="ca-rail-bar"></div>
+          </div>
+          <div class="ca-rail-item" data-idx="3">
+            <span class="ca-rail-num">04</span>
+            <div class="ca-rail-info">
+              <span class="ca-rail-name">Memory</span
+              ><span class="ca-rail-sub">64GB DDR5-6000</span>
+            </div>
+            <div class="ca-rail-arrow">
+              <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5" /></svg>
+            </div>
+            <div class="ca-rail-bar"></div>
+          </div>
+          <div class="ca-rail-item" data-idx="4">
+            <span class="ca-rail-num">05</span>
+            <div class="ca-rail-info">
+              <span class="ca-rail-name">Storage</span
+              ><span class="ca-rail-sub">Fury Renegade 8TB</span>
+            </div>
+            <div class="ca-rail-arrow">
+              <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5" /></svg>
+            </div>
+            <div class="ca-rail-bar"></div>
+          </div>
+        </nav>
+
+        <div class="ca-stage" id="caStage">
+          <div class="ca-stage-atm"></div>
+          <div class="ca-grain"></div>
+          <div class="ca-grid-lines"></div>
+          <div class="ca-progress">
+            <div class="ca-progress-track"></div>
+            <div class="ca-progress-fill" id="caProgFill"></div>
+          </div>
+
+          <!-- 0: PROCESSOR -->
+          <div class="ca-panel active" data-idx="0">
+            <div class="ca-watermark">9950X3D</div>
+            <div class="ca-visual">
+              <div class="ca-img-wrap">
+                <img
+                  class="ca-comp-img"
+                  style="max-width: 480px; max-height: 480px"
+                  src="Resource/MIKU/cpu-mbd.png"
+                  alt="AMD Ryzen 9 9950X3D"
+                />
+              </div>
+            </div>
+            <div class="ca-info">
+              <div class="ca-info-tag">
+                <div class="ca-info-pip"></div>
+                Component 01 — Processor
+              </div>
+              <div class="ca-info-name">Ryzen 9<br />9950X3D</div>
+              <span class="ca-info-rule"></span>
+              <p class="ca-info-desc">
+                AMD's 3D V-Cache stacking delivers 144MB of accessible cache —
+                obliterating frame-time variance across every demanding title.
+              </p>
+              <div class="ca-info-specs">
+                <span class="ca-spec-tag">Socket AM5</span>
+                <span class="ca-spec-tag">16 Cores / 32 Threads</span>
+                <span class="ca-spec-tag">DDR5</span>
+                <span class="ca-spec-tag">PCIe 5.0</span>
+                <span class="ca-spec-tag hi">3D V-Cache</span>
+              </div>
+              <div class="ca-info-cta">
+                <a href="#reserve" class="cta primary"
+                  ><span>Reserve Your Unit</span><span class="btn-glow"></span
+                ></a>
+                <a href="#arsenal" class="cta secondary">Full Specs</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1: GRAPHICS -->
+          <div class="ca-panel" data-idx="1">
+            <div class="ca-watermark">RTX 5080</div>
+            <div class="ca-visual">
+              <div class="ca-img-wrap">
+                <img
+                  class="ca-comp-img"
+                  style="max-width: 480px; max-height: 480px"
+                  src="Resource/MIKU/gpu--side.png"
+                  alt="ASUS ROG RTX 5080 Miku Edition"
+                />
+              </div>
+            </div>
+            <div class="ca-info">
+              <div class="ca-info-tag">
+                <div class="ca-info-pip"></div>
+                Component 02 — Graphics
+              </div>
+              <div class="ca-info-name">RTX 5080<br />Miku Ed.</div>
+              <span class="ca-info-rule"></span>
+              <p class="ca-info-desc">
+                Exclusive Hatsune Miku-illustrated shroud and engraved
+                backplate. DLSS 4 Multi Frame Generation with 16GB GDDR7
+                underneath the art.
+              </p>
+              <div class="ca-info-specs">
+                <span class="ca-spec-tag">PCIe 5.0</span>
+                <span class="ca-spec-tag">10,752 CUDA Cores</span>
+                <span class="ca-spec-tag">2.9 GHz Boost</span>
+                <span class="ca-spec-tag">RTX IO</span>
+                <span class="ca-spec-tag hi">Miku Collab</span>
+              </div>
+              <div class="ca-info-cta">
+                <a href="#reserve" class="cta primary"
+                  ><span>Reserve Your Unit</span><span class="btn-glow"></span
+                ></a>
+                <a href="#arsenal" class="cta secondary">Full Specs</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2: MOTHERBOARD -->
+          <div class="ca-panel" data-idx="2">
+            <div class="ca-watermark">X870E</div>
+            <div class="ca-visual">
+              <div class="ca-img-wrap">
+                <img
+                  class="ca-comp-img"
+                  style="max-width: 480px; max-height: 480px"
+                  src="Resource/MIKU/mbd.png"
+                  alt="ASUS ROG Strix X870E Miku Edition"
+                />
+              </div>
+            </div>
+            <div class="ca-info">
+              <div class="ca-info-tag">
+                <div class="ca-info-pip"></div>
+                Component 03 — Motherboard
+              </div>
+              <div class="ca-info-name">ROG Strix<br />X870E</div>
+              <span class="ca-info-rule"></span>
+              <p class="ca-info-desc">
+                Signature Miku teal heatsinks on an X870E foundation — 20+2
+                power stages, triple M.2 slots, WiFi 7, and 10G LAN built in.
+              </p>
+              <div class="ca-info-specs">
+                <span class="ca-spec-tag">AM5 · EATX</span>
+                <span class="ca-spec-tag">PCIe 5.0</span>
+                <span class="ca-spec-tag">WiFi 7</span>
+                <span class="ca-spec-tag">3× M.2</span>
+                <span class="ca-spec-tag hi">Miku Collab</span>
+              </div>
+              <div class="ca-info-cta">
+                <a href="#reserve" class="cta primary"
+                  ><span>Reserve Your Unit</span><span class="btn-glow"></span
+                ></a>
+                <a href="#arsenal" class="cta secondary">Full Specs</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: MEMORY -->
+          <div class="ca-panel" data-idx="3">
+            <div class="ca-watermark">DDR5</div>
+            <div class="ca-visual">
+              <div class="ca-img-wrap">
+                <img
+                  class="ca-comp-img"
+                  style="max-width: 480px; max-height: 480px"
+                  src="Resource/MIKU/ram-miku.png"
+                  alt="Kingston FURY Renegade 64GB DDR5"
+                />
+              </div>
+            </div>
+            <div class="ca-info">
+              <div class="ca-info-tag">
+                <div class="ca-info-pip"></div>
+                Component 04 — Memory
+              </div>
+              <div class="ca-info-name">64GB<br />DDR5-6000</div>
+              <span class="ca-info-rule"></span>
+              <p class="ca-info-desc">
+                2×32GB Kingston FURY Renegade at 6000MHz with EXPO one-click
+                tuning. RGB synchronized to the Miku teal lighting profile
+                across the build.
+              </p>
+              <div class="ca-info-specs">
+                <span class="ca-spec-tag">2×32GB</span>
+                <span class="ca-spec-tag">DDR5-6000</span>
+                <span class="ca-spec-tag">CL30</span>
+                <span class="ca-spec-tag">1.40V</span>
+                <span class="ca-spec-tag hi">Miku RGB</span>
+              </div>
+              <div class="ca-info-cta">
+                <a href="#reserve" class="cta primary"
+                  ><span>Reserve Your Unit</span><span class="btn-glow"></span
+                ></a>
+                <a href="#arsenal" class="cta secondary">Full Specs</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: STORAGE -->
+          <div class="ca-panel" data-idx="4">
+            <div class="ca-watermark">8 TB</div>
+            <div class="ca-visual">
+              <div class="ca-img-wrap">
+                <img
+                  class="ca-comp-img"
+                  style="max-width: 480px; max-height: 480px"
+                  src="Resource/MIKU/ssd-miku.png"
+                  alt="Kingston Fury Renegade 8TB NVMe"
+                />
+              </div>
+            </div>
+            <div class="ca-info">
+              <div class="ca-info-tag">
+                <div class="ca-info-pip"></div>
+                Component 05 — Storage
+              </div>
+              <div class="ca-info-name">8TB<br />Renegade</div>
+              <span class="ca-info-rule"></span>
+              <p class="ca-info-desc">
+                Eight terabytes at 7,300 MB/s. A game library built not for this
+                year, but the next decade of titles — with headroom to match.
+              </p>
+              <div class="ca-info-specs">
+                <span class="ca-spec-tag">M.2 2280</span>
+                <span class="ca-spec-tag">PCIe 4.0 ×4</span>
+                <span class="ca-spec-tag">3D TLC NAND</span>
+                <span class="ca-spec-tag">7,000 MB/s Write</span>
+                <span class="ca-spec-tag hi">8 Terabytes</span>
+              </div>
+              <div class="ca-info-cta">
+                <a href="#reserve" class="cta primary"
+                  ><span>Reserve Your Unit</span><span class="btn-glow"></span
+                ></a>
+                <a href="#arsenal" class="cta secondary">Full Specs</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ca-dots" id="caDots">
+            <div class="ca-dot active" data-idx="0"></div>
+            <div class="ca-dot" data-idx="1"></div>
+            <div class="ca-dot" data-idx="2"></div>
+            <div class="ca-dot" data-idx="3"></div>
+            <div class="ca-dot" data-idx="4"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section class="perf-section">
+      <div class="section-wrap">
+        <div class="reveal-fade">
+          <p class="section-label"><span></span>03 / Performance Manifest</p>
+        </div>
+        <h2 class="section-title reveal-up">
+          Raw <span class="teal">Numbers.</span>
+        </h2>
+        <p class="section-sub reveal-up">
+          All benchmarks run at native 4K resolution. Ultra/Max settings. Stock
+          clocks only — no cherry-picked OC results.
+        </p>
+
+        <div class="perf-grid">
+          <div>
+            <h3 class="game-title reveal-up">4K Gaming — Avg FPS</h3>
+            <div class="fps-list">
+              <div class="fps-item">
+                <div class="fps-meta">
+                  <span class="fps-game"
+                    >Cyberpunk 2077 — Path Tracing Ultra</span
+                  ><span class="fps-val">142<span> fps</span></span>
+                </div>
+                <div class="fps-bar-bg">
+                  <div class="fps-bar teal" data-width="71"></div>
+                </div>
+                <div class="fps-qual">
+                  4K · Ultra + Path Tracing · DLSS Quality
+                </div>
+              </div>
+              <div class="fps-item">
+                <div class="fps-meta">
+                  <span class="fps-game">Black Myth: Wukong — Cinematic</span
+                  ><span class="fps-val">118<span> fps</span></span>
+                </div>
+                <div class="fps-bar-bg">
+                  <div class="fps-bar mag" data-width="59"></div>
+                </div>
+                <div class="fps-qual">
+                  4K · Cinematic Settings · DLSS Performance
+                </div>
+              </div>
+              <div class="fps-item">
+                <div class="fps-meta">
+                  <span class="fps-game">Alan Wake 2 — Full Ray Tracing</span
+                  ><span class="fps-val">156<span> fps</span></span>
+                </div>
+                <div class="fps-bar-bg">
+                  <div class="fps-bar teal" data-width="78"></div>
+                </div>
+                <div class="fps-qual">4K · Full Ray Tracing · DLSS Quality</div>
+              </div>
+              <div class="fps-item">
+                <div class="fps-meta">
+                  <span class="fps-game">Counter-Strike 2 — Competitive</span
+                  ><span class="fps-val">480<span> fps</span></span>
+                </div>
+                <div class="fps-bar-bg">
+                  <div class="fps-bar gold" data-width="96"></div>
+                </div>
+                <div class="fps-qual">1080p · Low Settings · Native</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="game-title reveal-up">System Benchmarks</h3>
+            <div class="stat-blocks">
+              <div class="stat-block highlight">
+                <div class="big-num">
+                  2,940<span class="big-unit"> pts</span>
+                </div>
+                <div class="big-label">Cinebench R24 Multi</div>
+              </div>
+              <div class="stat-block">
+                <div class="big-num">144<span class="big-unit"> MB</span></div>
+                <div class="big-label">L3 Cache (3D V-Cache)</div>
+              </div>
+              <div class="stat-block">
+                <div class="big-num">
+                  7,300<span class="big-unit"> MB/s</span>
+                </div>
+                <div class="big-label">NVMe Sequential Read</div>
+              </div>
+              <div class="stat-block highlight">
+                <div class="big-num">96<span class="big-unit"> GB</span></div>
+                <div class="big-label">Total System Memory</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM -->
+    <section class="eco-system">
+      <div class="eco-header">
+        <p class="section-label reveal-fade"><span></span>04 / The Ecosystem</p>
+        <h2 class="section-title reveal-up">
+          The <span class="teal">Peripherals.</span>
+        </h2>
+        <p class="section-sub reveal-up">
+          Every surface. Every input. Every frequency. Miku-signed.
+        </p>
+      </div>
+      <div class="eco-wrapper">
+        <div class="eco-card reveal-fade">
+          <div class="eco-visual">
+            <img
+              src="Resource/MIKU/kbd-front.png"
+              alt="ROG Strix Scope II Miku Edition"
+              class="eco-image"
+            />
+          </div>
+          <div class="eco-content">
+            <h3 class="product-name">
+              ROG Strix Scope II RX <span class="magenta-text">Miku Ed.</span>
+            </h3>
+            <p class="product-desc">
+              Optical-mechanical switches. Miku-illustrated keycap set. Teal
+              ARGB underglow synchronized to your build.
+            </p>
+          </div>
+        </div>
+        <div class="eco-card highlight reveal-fade">
+          <div class="eco-badge">Signature Pick</div>
+          <div class="eco-visual">
+            <img
+              src="Resource/MIKU/mse-side.png"
+              alt="ROG Strix Impact III Miku Edition"
+              class="eco-image"
+            />
+          </div>
+          <div class="eco-content">
+            <h3 class="product-name">
+              ROG Strix Impact III <span class="magenta-text">Miku Ed.</span>
+            </h3>
+            <p class="product-desc">
+              36,000 DPI optical sensor. Ambidextrous Miku livery.
+              Ultra-lightweight at 59g — precision without compromise.
+            </p>
+          </div>
+        </div>
+        <div class="eco-card reveal-fade">
+          <div class="eco-visual">
+            <img
+              src="Resource/MIKU/headphone-side.png"
+              alt="ROG Delta S Miku Edition"
+              class="eco-image"
+            />
+          </div>
+          <div class="eco-content">
+            <h3 class="product-name">
+              ROG Delta S <span class="magenta-text">Miku Ed.</span>
+            </h3>
+            <p class="product-desc">
+              ESS Quad-DAC. 7.1 virtual surround. Designed to hear every note
+              she was born to sing.
+            </p>
+          </div>
+        </div>
+        <div class="eco-card reveal-fade">
+          <div class="eco-visual">
+            <img
+              src="Resource/MIKU/monitor.png"
+              alt="ROG Swift OLED Miku Edition"
+              class="eco-image"
+            />
+          </div>
+          <div class="eco-content">
+            <h3 class="product-name">
+              ROG Swift OLED <span class="magenta-text">Miku Ed.</span>
+            </h3>
+            <p class="product-desc">
+              27" QHD OLED. 360Hz. 0.03ms GtG. Miku art-panel stand. Every frame
+              as she intended.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL ARSENAL -->
+    <section class="arsenal-section" id="arsenal">
+      <div class="arsenal-wrapper">
+        <div class="arsenal-left reveal-fade">
+          <h2 class="arsenal-title">
+            Full <br /><span class="teal-text">Arsenal</span>
+          </h2>
+          <p class="arsenal-desc">
+            Every component hand-selected for this collaboration. No compromises
+            on performance, no shortcuts on aesthetics. This is the complete
+            manifest.
+          </p>
+          <div class="arsenal-badge">
+            <div class="badge-num">39</div>
+            <div class="badge-text">Units<br />Total</div>
+          </div>
+          <ul class="arsenal-checklist">
+            <li>
+              <i class="fa-solid fa-check"></i> All Miku-collab components
+              sourced direct
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> 48-hour premium assembly window
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Full burn-in and benchmark
+              testing
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> White-glove worldwide shipping
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> Certificate of authenticity
+              included
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i> 3-year APEX premium warranty
+            </li>
+          </ul>
+        </div>
+
+        <div class="arsenal-right">
+          <div class="arsenal-item">
+            <div class="item-cat">CPU</div>
+            <div class="item-data">
+              <h4 class="item-name">AMD Ryzen 9 9950X3D</h4>
+              <p class="item-sub">
+                16 Cores / 32 Threads — 5.7 GHz Boost — 144MB 3D V-Cache — AM5
+              </p>
+              <span class="item-tag tag-gold">FLAGSHIP</span>
+            </div>
+          </div>
+          <div class="arsenal-item">
+            <div class="item-cat">GPU</div>
+            <div class="item-data">
+              <h4 class="item-name">ASUS ROG RTX 5080 Hatsune Miku Edition</h4>
+              <p class="item-sub">
+                16GB GDDR7 — 10,752 CUDA Cores — DLSS 4 — Miku Illustrated
+                Shroud
+              </p>
+              <span class="item-tag tag-teal">MIKU COLLAB</span>
+            </div>
+          </div>
+          <div class="arsenal-item">
+            <div class="item-cat">MOBO</div>
+            <div class="item-data">
+              <h4 class="item-name">
+                ASUS ROG Strix X870E-E Hatsune Miku Edition
+              </h4>
+              <p class="item-sub">
+                AM5 Socket — PCIe 5.0 — WiFi 7 — Miku Livery OLED Display
+              </p>
+              <span class="item-tag tag-teal">MIKU COLLAB</span>
+            </div>
+          </div>
+          <div class="arsenal-item">
+            <div class="item-cat">RAM</div>
+            <div class="item-data">
+              <h4 class="item-name">
+                Kingston FURY Renegade RGB 96GB DDR5-6000 CL32
+              </h4>
+              <p class="item-sub">
+                2×48GB — 6000 MHz — CL32 — Intel XMP 3.0 / AMD EXPO
+              </p>
+              <span class="item-tag tag-gold">PERFORMANCE</span>
+            </div>
+          </div>
+          <div class="arsenal-item">
+            <div class="item-cat">SSD</div>
+            <div class="item-data">
+              <h4 class="item-name">Kingston Fury Renegade G5 8TB NVMe</h4>
+              <p class="item-sub">
+                PCIe 4.0 ×4 — 7,300 MB/s Read — 7,000 MB/s Write
+              </p>
+              <span class="item-tag tag-gold">8TB CAPACITY</span>
+            </div>
+          </div>
+          <div class="arsenal-item">
+            <div class="item-cat">PSU</div>
+            <div class="item-data">
+              <h4 class="item-name">
+                ASUS ROG Thor Platinum III 1200W Hatsune Miku Edition
+              </h4>
+              <p class="item-sub">
+                80+ Platinum — Fully Modular — OLED Display — Miku Art Panel
+              </p>
+              <span class="item-tag tag-teal">MIKU COLLAB</span>
+            </div>
+          </div>
+          <div class="arsenal-item">
+            <div class="item-cat">AIO</div>
+            <div class="item-data">
+              <h4 class="item-name">
+                ASUS ROG Ryuo IV SLC 360 ARGB Hatsune Miku Edition
+              </h4>
+              <p class="item-sub">
+                360mm Radiator — 1.77" OLED Display — SLC Thermal Compound
+              </p>
+              <span class="item-tag tag-teal">MIKU COLLAB</span>
+            </div>
+          </div>
+          <div class="arsenal-item">
+            <div class="item-cat">CASE</div>
+            <div class="item-data">
+              <h4 class="item-name">
+                ASUS ROG Strix Helios II Hatsune Miku Edition
+              </h4>
+              <p class="item-sub">
+                Mid-Tower ATX — Tempered Glass — Miku Panel Art — Teal ARGB
+              </p>
+              <span class="item-tag tag-teal">MIKU COLLAB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy-section reveal-fade">
+      <div class="philosophy-bg-text" aria-hidden="true">APEX</div>
+      <div class="philosophy-content">
+        <svg
+          class="quote-icon"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="var(--miku-teal)"
+        >
+          <path
+            d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"
+          />
+        </svg>
+        <h2 class="philosophy-text">
+          We didn't just paint a chassis. We engineered a physical sanctuary for
+          a digital icon. Every wire, every block, every frequency is tuned to
+          bridge the virtual and the real.
+        </h2>
+        <p class="philosophy-author">— APEX Lead Systems Architect</p>
+      </div>
+    </section>
+
+    <!-- ALLOCATION TERMINAL -->
+    <section class="allocation-section" id="reserve">
+      <div class="terminal-container reveal-fade">
+        <div class="terminal-header">
+          <div class="term-status">
+            <div class="pulse-dot"></div>
+            <span>NETWORK SECURE // ENCRYPTED</span>
+          </div>
+          <h2 class="term-title">INITIATE <em>ALLOCATION</em></h2>
+          <p class="term-sub">
+            Only 03 of 39 units remain. Enter your credentials to secure your
+            build slot. White-glove concierge will contact you within 2 hours to
+            finalize configuration.
+          </p>
+        </div>
+
+        <form class="terminal-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="f-name">Operative Designation</label>
+              <input id="f-name" type="text" placeholder="Full Name" required />
+            </div>
+            <div class="input-group">
+              <label for="f-email">Secure Comms</label>
+              <input
+                id="f-email"
+                type="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-group full-width">
+            <label for="f-region">Delivery Coordinates</label>
+            <input
+              id="f-region"
+              type="text"
+              placeholder="Country / Region (Global Shipping Included)"
+              required
+            />
+          </div>
+          <div class="terminal-footer">
+            <div class="price-lockup">
+              <span class="price-label">TOTAL ALLOCATION</span>
+              <span class="price-value"
+                >$15,000 <span class="currency">USD</span></span
+              >
+            </div>
+            <button class="cta primary terminal-btn" type="submit">
+              <span>SECURE UNIT 37/39</span>
+              <span class="btn-glow"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="apex-footer">
+      <div class="footer-closing">
+        <h2 class="closing-title">
+          SYNTHETIC SOUL. <br /><span class="teal-text">RAW COMPUTE.</span>
+        </h2>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-logo">
+          APEX <span class="cross">×</span> 初音ミク
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Protocol</a>
+          <a href="#">Terms of Allocation</a>
+          <a href="#">Support Network</a>
+        </div>
+        <div class="footer-copyright">
+          © 2026 APEX SYSTEMS. ALL RIGHTS RESERVED.<br />
+          HATSUNE MIKU IS A COPYRIGHT OF CRYPTON FUTURE MEDIA, INC.
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="miku.js"></script>
+  </body>
+</html>
