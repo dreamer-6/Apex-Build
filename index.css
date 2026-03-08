@@ -564,7 +564,6 @@ body {
 
 .special-edition {
   width: 100%;
-  margin: 0 auto;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -658,7 +657,8 @@ body {
 }
 .arsenal-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
   gap: 30px;
 }
 .build-card {
@@ -863,7 +863,7 @@ body {
 
 .categories-section {
   width: 100%;
-  max-width: 1400px;
+  max-width: 2560px;
   margin: 0 auto;
   padding: 40px 5% 100px 5%;
   position: relative;
@@ -1059,7 +1059,7 @@ body {
 }
 
 .spotlight-wrapper {
-  max-width: 1400px;
+max-width: 2560px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -1358,7 +1358,7 @@ body {
 }
 
 .about-wrapper {
-  max-width: 1400px;
+  max-width: 2560px;
   margin: 0 auto;
 }
 
@@ -1671,7 +1671,7 @@ body {
 }
 
 .reports-wrapper {
-  max-width: 1400px;
+  max-width: 2560px;
   margin: 0 auto;
 }
 
@@ -1828,7 +1828,7 @@ body {
 }
 
 .initiate-wrapper {
-  max-width: 1200px;
+  max-width: 2560px;
   margin: 0 auto;
 }
 
@@ -1990,7 +1990,7 @@ body {
 }
 
 .footer-wrapper {
-  max-width: 1400px;
+  max-width: 2560px;
   margin: 0 auto;
 }
 
